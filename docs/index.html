@@ -1,0 +1,2409 @@
+﻿<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <title>POG 2026/05</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://itoetc.com/css/itoetc.css" rel="stylesheet">
+    <script>
+      function updateClock() {
+        var now = new Date();
+        var hour = now.getHours();
+        var minute = now.getMinutes();
+        var second = now.getSeconds();
+        var ampm = "pm";
+
+        if ( hour < 12 ) ampm = "am";
+        if ( hour < 10 ) hour = "0" + hour;
+        if ( minute < 10 ) minute = "0" + minute;
+        if ( second < 10 ) second = "0" + second;
+        document.getElementById('myHour').innerHTML = hour;
+        document.getElementById('myMinute').innerHTML = minute;
+        document.getElementById('mySecond').innerHTML = second;
+        document.getElementById('myAmPm').innerHTML = ampm;
+      }
+      function start() {
+        setInterval("updateClock();", 1000);
+        setInterval("location.reload();", 300000);
+      }
+    </script>
+    <style>
+      body {
+        background-color: aliceblue;
+        color: #fffffd;
+        margin: 10px;
+        /*
+        background-color: darkslategray;
+        font-family: 'Roboto Mono', monospace;
+        */
+        font-family: 'Roboto', sans-serif;
+        padding-top: 4rem; 
+      }
+      .circle{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background:  black;
+      }
+      .jump_offset {
+        padding-top: 100px;
+        margin-top: 100px;
+      }
+    </style>
+  </head>
+  <body onload="start();" class="bg-dark" id="page_top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand text-danger fs-4" href="https://itoetc.com/pog/">ito/bin/<span class="text-white">POG</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Links
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="https://itoetc.com/pog" target="_blank">POG</a></li><li><a class="dropdown-item" href="https://itoetc.com/pogstallion" target="_blank">POG種牡馬価格</a></li><li><a class="dropdown-item" href="https://itoetc.com/pognewstallion" target="_blank">新種牡馬</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Archives
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="https://itoetc.com/pog/2026/05/index.html" target="_blank">2026/05</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2026/04/index.html" target="_blank">2026/04</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2026/03/index.html" target="_blank">2026/03</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2026/02/index.html" target="_blank">2026/02</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2026/01/index.html" target="_blank">2026/01</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2025/12/index.html" target="_blank">2025/12</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2025/11/index.html" target="_blank">2025/11</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2025/10/index.html" target="_blank">2025/10</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2025/09/index.html" target="_blank">2025/09</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2025/08/index.html" target="_blank">2025/08</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2025/07/index.html" target="_blank">2025/07</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2025/06/index.html" target="_blank">2025/06</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2025/05/index.html" target="_blank">2025/05</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2025/04/index.html" target="_blank">2025/04</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2025/03/index.html" target="_blank">2025/03</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2025/02/index.html" target="_blank">2025/02</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2025/01/index.html" target="_blank">2025/01</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2024/12/index.html" target="_blank">2024/12</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2024/11/index.html" target="_blank">2024/11</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2024/10/index.html" target="_blank">2024/10</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2024/09/index.html" target="_blank">2024/09</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2024/08/index.html" target="_blank">2024/08</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2024/07/index.html" target="_blank">2024/07</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2024/06/index.html" target="_blank">2024/06</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2024/05/index.html" target="_blank">2024/05</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2024/04/index.html" target="_blank">2024/04</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2024/03/index.html" target="_blank">2024/03</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2024/02/index.html" target="_blank">2024/02</a></li><li><a class="dropdown-item" href="https://itoetc.com/pog/2024/01/index.html" target="_blank">2024/01</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-text fs-1">
+              <a href="#page_bottom"><span class="bi-arrow-down-circle-fill text-info text-end"></span></a>
+            </li>
+            <li class="nav-text fs-1">
+              <a href="#page_top"><span class="bi-arrow-up-circle-fill text-primary text-end"></span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<main class="container-fluid">
+<div class="row mt-3">
+<div class="col-sm-12 col-lg-6 col-xl-6">
+<div class="card fs-6">
+<div class="card-header bg-dark text-white">5/16 出走予定/結果速報</div>
+<div class="card-body bg-dark">
+<div class="table-responsive">
+<table class="table table-dark table-sm">
+<tbody>
+<tr>
+<td class="text-start">新潟2R 1200ダ 未勝利</td>
+<td class="text-center bg-gate7 text-dark">12</td>
+<td class="text-start"><a href="https://www.google.com/search?q=ナムラロダン" target="_blank" class="text-white">ナムラロダン</a></td>
+<td class="text-start">西村淳也</td>
+<td class="text-start"><a href="#JUMP172" class="text-white">ウチダ</a></td>
+<td class="text-center bg-gate4 text-white">2人</td>
+<td class="text-center bg-gate4 text-white">2着</td>
+<td class="text-end">240p</td>
+</tr>
+<tr>
+<td class="text-start">京都4R 2400芝 未勝利</td>
+<td class="text-center bg-gate6 text-white">6</td>
+<td class="text-start"><a href="https://www.google.com/search?q=ドンテスタマスター" target="_blank" class="text-white">ドンテスタマスター</a></td>
+<td class="text-start">坂井瑠星</td>
+<td class="text-start"><a href="#JUMP168" class="text-white">スエキ</a></td>
+<td class="text-center bg-gate6 text-white">1人</td>
+<td class="text-center bg-gate7 text-dark">3着</td>
+<td class="text-end">150p</td>
+</tr>
+<tr>
+<td class="text-start">新潟4R 1800ダ 未勝利</td>
+<td class="text-center bg-gate5 text-dark">5</td>
+<td class="text-start"><a href="https://www.google.com/search?q=アンデルストープ" target="_blank" class="text-white">アンデルストープ</a></td>
+<td class="text-start">石田拓郎</td>
+<td class="text-start"><a href="#JUMP170" class="text-white">アイヤマ</a></td>
+<td class="text-center bg-dark text-white">9人</td>
+<td class="text-center bg-dark text-white">7着</td>
+<td class="text-end">0p</td>
+</tr>
+<tr>
+<td class="text-start">東京6R 2400芝 １勝クラス</td>
+<td class="text-center bg-gate3 text-white">3</td>
+<td class="text-start"><a href="https://www.google.com/search?q=マジョレルブルー" target="_blank" class="text-white">マジョレルブルー</a></td>
+<td class="text-start">戸崎圭太</td>
+<td class="text-start"><a href="#JUMP162" class="text-white">ヤマダ</a></td>
+<td class="text-center bg-gate7 text-dark">3人</td>
+<td class="text-center bg-gate6 text-white">1着</td>
+<td class="text-end">820p</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div><!--//col-->
+<div class="col-sm-12 col-lg-6 col-xl-6">
+<div class="card fs-6">
+<div class="card-header bg-dark text-white">5/17 出走予定/結果速報</div>
+<div class="card-body bg-dark">
+<div class="table-responsive">
+<table class="table table-dark table-sm">
+<tbody>
+<tr>
+<td class="text-start">東京1R 1600ダ 未勝利</td>
+<td class="text-center bg-gate6 text-white">12</td>
+<td class="text-start"><a href="https://www.google.com/search?q=キミガハマ" target="_blank" class="text-white">キミガハマ</a></td>
+<td class="text-start">丹内祐次</td>
+<td class="text-start"><a href="#JUMP168" class="text-white">スエキ</a></td>
+<td class="text-center bg-dark text-white">15人</td>
+<td class="text-center bg-dark text-white">0着</td>
+<td class="text-end">0p</td>
+</tr>
+<tr>
+<td class="text-start">東京4R 1800芝 未勝利</td>
+<td class="text-center bg-gate2 text-white">3</td>
+<td class="text-start"><a href="https://www.google.com/search?q=マジックパレス" target="_blank" class="text-white">マジックパレス</a></td>
+<td class="text-start">ルメール</td>
+<td class="text-start"><a href="#JUMP154" class="text-white">ナカジマ</a></td>
+<td class="text-center bg-gate6 text-white">1人</td>
+<td class="text-center bg-dark text-white">0着</td>
+<td class="text-end">0p</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div><!--//col-->
+<div class="col-sm-12 col-lg-6 col-xl-6">
+<div class="card fs-6">
+<div class="card-header bg-dark text-white">5/24 出走予定/結果速報</div>
+<div class="card-body bg-dark">
+<div class="table-responsive">
+<table class="table table-dark table-sm">
+<tbody>
+<tr>
+<td class="text-start">東京11R 2400芝  優駿牝馬 G1</td>
+<td class="text-center bg-dark text-white">0</td>
+<td class="text-start"><a href="https://www.google.com/search?q=アランカール" target="_blank" class="text-white">アランカール</a></td>
+<td class="text-start">未定</td>
+<td class="text-start"><a href="#JUMP172" class="text-white">ウチダ</a></td>
+<td class="text-center bg-dark text-white">0人</td>
+<td class="text-center bg-dark text-white">0着</td>
+<td class="text-end">0p</td>
+</tr>
+<tr>
+<td class="text-start">東京11R 2400芝  優駿牝馬 G1</td>
+<td class="text-center bg-dark text-white">0</td>
+<td class="text-start"><a href="https://www.google.com/search?q=スマートプリエール" target="_blank" class="text-white">スマートプリエール</a></td>
+<td class="text-start">未定</td>
+<td class="text-start"><a href="#JUMP149" class="text-white">イトウ</a></td>
+<td class="text-center bg-dark text-white">0人</td>
+<td class="text-center bg-dark text-white">0着</td>
+<td class="text-end">0p</td>
+</tr>
+<tr>
+<td class="text-start">東京11R 2400芝  優駿牝馬 G1</td>
+<td class="text-center bg-dark text-white">0</td>
+<td class="text-start"><a href="https://www.google.com/search?q=ドリームコア" target="_blank" class="text-white">ドリームコア</a></td>
+<td class="text-start">未定</td>
+<td class="text-start"><a href="#JUMP149" class="text-white">イトウ</a></td>
+<td class="text-center bg-dark text-white">0人</td>
+<td class="text-center bg-dark text-white">0着</td>
+<td class="text-end">0p</td>
+</tr>
+<tr>
+<td class="text-start">東京11R 2400芝  優駿牝馬 G1</td>
+<td class="text-center bg-dark text-white">0</td>
+<td class="text-start"><a href="https://www.google.com/search?q=リアライズルミナス" target="_blank" class="text-white">リアライズルミナス</a></td>
+<td class="text-start">未定</td>
+<td class="text-start"><a href="#JUMP149" class="text-white">イトウ</a></td>
+<td class="text-center bg-dark text-white">0人</td>
+<td class="text-center bg-dark text-white">0着</td>
+<td class="text-end">0p</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div><!--//col-->
+</div><!--//row-->
+<div class="row mt-3">
+<div class="col-sm-12 col-lg-6 col-xl-4">
+<div class="card fs-6">
+<div class="card-header bg-dark text-white">POGランキング</div>
+<div class="card-body bg-dark">
+<div class="table-responsive">
+<table class="table table-dark table-sm">
+<tbody>
+<tr>
+<td class="text-end">1</td>
+<td class="text-start"><a href="#JUMP151" class="text-white">ヒロセ</a></td>
+<td class="text-end">28638</td>
+<td class="text-end">13.13.2.11</td>
+<td class="text-start"><a href="https://db.netkeiba.com/horse/2023106850/" target="_blank" class="text-white">ゾロアストロ</a></td>
+</tr>
+<tr>
+<td class="text-end">2</td>
+<td class="text-start"><a href="#JUMP170" class="text-white">アイヤマ</a></td>
+<td class="text-end">27314</td>
+<td class="text-end">12.7.4.43</td>
+<td class="text-start"><a href="https://db.netkeiba.com/horse/2023103604/" target="_blank" class="text-white">リアライズシリウス</a></td>
+</tr>
+<tr>
+<td class="text-end">3</td>
+<td class="text-start"><a href="#JUMP172" class="text-white">ウチダ</a></td>
+<td class="text-end">27030</td>
+<td class="text-end">9.8.4.23</td>
+<td class="text-start"><a href="https://db.netkeiba.com/horse/2023107153/" target="_blank" class="text-white">カヴァレリッツォ</a></td>
+</tr>
+<tr>
+<td class="text-end">4</td>
+<td class="text-start"><a href="#JUMP149" class="text-white">イトウ</a></td>
+<td class="text-end">24940</td>
+<td class="text-end">15.8.12.32</td>
+<td class="text-start"><a href="https://db.netkeiba.com/horse/2023107146/" target="_blank" class="text-white">ドリームコア</a></td>
+</tr>
+<tr>
+<td class="text-end">5</td>
+<td class="text-start"><a href="#JUMP154" class="text-white">ナカジマ</a></td>
+<td class="text-end">23779</td>
+<td class="text-end">9.4.6.22</td>
+<td class="text-start"><a href="https://db.netkeiba.com/horse/2023105685/" target="_blank" class="text-white">ダイヤモンドノット</a></td>
+</tr>
+<tr>
+<td class="text-end">6</td>
+<td class="text-start"><a href="#JUMP162" class="text-white">ヤマダ</a></td>
+<td class="text-end">11017</td>
+<td class="text-end">7.10.2.13</td>
+<td class="text-start"><a href="https://db.netkeiba.com/horse/2023103444/" target="_blank" class="text-white">フィロステファニ</a></td>
+</tr>
+<tr>
+<td class="text-end">7</td>
+<td class="text-start"><a href="#JUMP160" class="text-white">マスター</a></td>
+<td class="text-end">10950</td>
+<td class="text-end">7.7.9.24</td>
+<td class="text-start"><a href="https://db.netkeiba.com/horse/2023107069/" target="_blank" class="text-white">ディアダイヤモンド</a></td>
+</tr>
+<tr>
+<td class="text-end">8</td>
+<td class="text-start"><a href="#JUMP156" class="text-white">タカハシ</a></td>
+<td class="text-end">10939</td>
+<td class="text-end">8.7.3.17</td>
+<td class="text-start"><a href="https://db.netkeiba.com/horse/2023107278/" target="_blank" class="text-white">バドリナート</a></td>
+</tr>
+<tr>
+<td class="text-end">9</td>
+<td class="text-start"><a href="#JUMP168" class="text-white">スエキ</a></td>
+<td class="text-end">9579</td>
+<td class="text-end">4.6.6.22</td>
+<td class="text-start"><a href="https://db.netkeiba.com/horse/2023107265/" target="_blank" class="text-white">フェスティバルヒル</a></td>
+</tr>
+<tr>
+<td class="text-end">10</td>
+<td class="text-start"><a href="#JUMP159" class="text-white">フルカワ</a></td>
+<td class="text-end">7536</td>
+<td class="text-end">5.6.9.26</td>
+<td class="text-start"><a href="https://db.netkeiba.com/horse/2023107191/" target="_blank" class="text-white">マルガ</a></td>
+</tr>
+<tr>
+<td class="text-end">11</td>
+<td class="text-start"><a href="#JUMP171" class="text-white">カネコ</a></td>
+<td class="text-end">0</td>
+<td class="text-end">0.0.0.0</td>
+<td class="text-start"><a href="https://db.netkeiba.com/horse/0/" target="_blank" class="text-white"></a></td>
+</tr>
+<tr>
+<td class="text-end">12</td>
+<td class="text-start"><a href="#JUMP163" class="text-white">ヒラオ</a></td>
+<td class="text-end">0</td>
+<td class="text-end">0.0.0.0</td>
+<td class="text-start"><a href="https://db.netkeiba.com/horse/0/" target="_blank" class="text-white"></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div><!--//col-->
+<div class="col-sm-12 col-lg-6 col-xl-4">
+<div class="card fs-6">
+<div class="card-header bg-dark text-white">今週の坂路調教(美浦)</div>
+<div class="card-body bg-dark">
+<div class="table-responsive">
+<table class="table table-dark table-sm">
+<tbody>
+<tr>
+<td class="text-start bg-dark text-white">5/10</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=マジックパレス" target="_blank" class="text-white">マジックパレス</a></td>
+<td class="text-start bg-dark text-white"><a href="#JUMP154" class="text-white">ナカジマ</a></td>
+<td class="text-start bg-dark text-white">542</td>
+<td class="text-start bg-dark text-white">397</td>
+<td class="text-start bg-dark text-white">256</td>
+<td class="text-start bg-dark text-white">126</td>
+</tr>
+<tr>
+<td class="text-start bg-dark text-white">5/10</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=リアライズシリウス" target="_blank" class="text-white">リアライズシリウス</a></td>
+<td class="text-start bg-dark text-white"><a href="#JUMP170" class="text-white">アイヤマ</a></td>
+<td class="text-start bg-dark text-white">551</td>
+<td class="text-start bg-dark text-white">401</td>
+<td class="text-start bg-dark text-white">262</td>
+<td class="text-start bg-dark text-white">125</td>
+</tr>
+<tr>
+<td class="text-start bg-dark text-white">5/10</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ドリームコア" target="_blank" class="text-white">ドリームコア</a></td>
+<td class="text-start bg-dark text-white"><a href="#JUMP149" class="text-white">イトウ</a></td>
+<td class="text-start bg-dark text-white">556</td>
+<td class="text-start bg-dark text-white">404</td>
+<td class="text-start bg-dark text-white">264</td>
+<td class="text-start bg-dark text-white">132</td>
+</tr>
+<tr>
+<td class="text-start bg-dark text-white">5/10</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=キミガハマ" target="_blank" class="text-white">キミガハマ</a></td>
+<td class="text-start bg-dark text-white"><a href="#JUMP168" class="text-white">スエキ</a></td>
+<td class="text-start bg-dark text-white">559</td>
+<td class="text-start bg-dark text-white">413</td>
+<td class="text-start bg-dark text-white">270</td>
+<td class="text-start bg-dark text-white">132</td>
+</tr>
+<tr>
+<td class="text-start bg-dark text-white">5/10</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=アウダーシア" target="_blank" class="text-white">アウダーシア</a></td>
+<td class="text-start bg-dark text-white"><a href="#JUMP172" class="text-white">ウチダ</a></td>
+<td class="text-start bg-dark text-white">564</td>
+<td class="text-start bg-dark text-white">414</td>
+<td class="text-start bg-dark text-white">271</td>
+<td class="text-start bg-dark text-white">129</td>
+</tr>
+<tr>
+<td class="text-start bg-dark text-white">5/10</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=イクシード" target="_blank" class="text-white">イクシード</a></td>
+<td class="text-start bg-dark text-white"><a href="#JUMP151" class="text-white">ヒロセ</a></td>
+<td class="text-start bg-dark text-white">576</td>
+<td class="text-start bg-dark text-white">426</td>
+<td class="text-start bg-dark text-white">276</td>
+<td class="text-start bg-dark text-white">132</td>
+</tr>
+<tr>
+<td class="text-start bg-dark text-white">5/12</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=キミガハマ" target="_blank" class="text-white">キミガハマ</a></td>
+<td class="text-start bg-dark text-white"><a href="#JUMP168" class="text-white">スエキ</a></td>
+<td class="text-start bg-dark text-white">610</td>
+<td class="text-start bg-dark text-white">441</td>
+<td class="text-start bg-dark text-white">284</td>
+<td class="text-start bg-dark text-white">140</td>
+</tr>
+<tr>
+<td class="text-start bg-gate6 text-white">5/16</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=キミガハマ" target="_blank" class="text-white">キミガハマ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="#JUMP168" class="text-white">スエキ</a></td>
+<td class="text-start bg-gate6 text-white">627</td>
+<td class="text-start bg-gate6 text-white">455</td>
+<td class="text-start bg-gate6 text-white">289</td>
+<td class="text-start bg-gate6 text-white">138</td>
+</tr>
+<tr>
+<td class="text-start bg-gate6 text-white">5/16</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=マジックパレス" target="_blank" class="text-white">マジックパレス</a></td>
+<td class="text-start bg-gate6 text-white"><a href="#JUMP154" class="text-white">ナカジマ</a></td>
+<td class="text-start bg-gate6 text-white">688</td>
+<td class="text-start bg-gate6 text-white">504</td>
+<td class="text-start bg-gate6 text-white">328</td>
+<td class="text-start bg-gate6 text-white">162</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div><!--//col-->
+<div class="col-sm-12 col-lg-6 col-xl-4">
+<div class="card fs-6">
+<div class="card-header bg-dark text-white">今週の坂路調教(栗東)</div>
+<div class="card-body bg-dark">
+<div class="table-responsive">
+<table class="table table-dark table-sm">
+<tbody>
+<tr>
+<td class="text-start bg-dark text-white">5/14</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ベラジオヴァレル" target="_blank" class="text-white">ベラジオヴァレル</a></td>
+<td class="text-start bg-dark text-white"><a href="#JUMP159" class="text-white">フルカワ</a></td>
+<td class="text-start bg-dark text-white">519</td>
+<td class="text-start bg-dark text-white">381</td>
+<td class="text-start bg-dark text-white">251</td>
+<td class="text-start bg-dark text-white">122</td>
+</tr>
+<tr>
+<td class="text-start bg-dark text-white">5/14</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ムスクレスト" target="_blank" class="text-white">ムスクレスト</a></td>
+<td class="text-start bg-dark text-white"><a href="#JUMP149" class="text-white">イトウ</a></td>
+<td class="text-start bg-dark text-white">534</td>
+<td class="text-start bg-dark text-white">381</td>
+<td class="text-start bg-dark text-white">248</td>
+<td class="text-start bg-dark text-white">124</td>
+</tr>
+<tr>
+<td class="text-start bg-dark text-white">5/13</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ナムラロダン" target="_blank" class="text-white">ナムラロダン</a></td>
+<td class="text-start bg-dark text-white"><a href="#JUMP172" class="text-white">ウチダ</a></td>
+<td class="text-start bg-dark text-white">540</td>
+<td class="text-start bg-dark text-white">392</td>
+<td class="text-start bg-dark text-white">251</td>
+<td class="text-start bg-dark text-white">121</td>
+</tr>
+<tr>
+<td class="text-start bg-dark text-white">5/13</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=マジョレルブルー" target="_blank" class="text-white">マジョレルブルー</a></td>
+<td class="text-start bg-dark text-white"><a href="#JUMP162" class="text-white">ヤマダ</a></td>
+<td class="text-start bg-dark text-white">551</td>
+<td class="text-start bg-dark text-white">400</td>
+<td class="text-start bg-dark text-white">267</td>
+<td class="text-start bg-dark text-white">128</td>
+</tr>
+<tr>
+<td class="text-start bg-dark text-white">5/15</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ダノンミッドナイト" target="_blank" class="text-white">ダノンミッドナイト</a></td>
+<td class="text-start bg-dark text-white"><a href="#JUMP162" class="text-white">ヤマダ</a></td>
+<td class="text-start bg-dark text-white">557</td>
+<td class="text-start bg-dark text-white">401</td>
+<td class="text-start bg-dark text-white">263</td>
+<td class="text-start bg-dark text-white">131</td>
+</tr>
+<tr>
+<td class="text-start bg-dark text-white">5/10</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ベラジオヴァレル" target="_blank" class="text-white">ベラジオヴァレル</a></td>
+<td class="text-start bg-dark text-white"><a href="#JUMP159" class="text-white">フルカワ</a></td>
+<td class="text-start bg-dark text-white">561</td>
+<td class="text-start bg-dark text-white">406</td>
+<td class="text-start bg-dark text-white">263</td>
+<td class="text-start bg-dark text-white">128</td>
+</tr>
+<tr>
+<td class="text-start bg-dark text-white">5/10</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=チェルヴァーラ" target="_blank" class="text-white">チェルヴァーラ</a></td>
+<td class="text-start bg-dark text-white"><a href="#JUMP159" class="text-white">フルカワ</a></td>
+<td class="text-start bg-dark text-white">576</td>
+<td class="text-start bg-dark text-white">416</td>
+<td class="text-start bg-dark text-white">267</td>
+<td class="text-start bg-dark text-white">128</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div><!--//col-->
+</div><!--//row-->
+<div class="row mt-3">
+<div class="col-sm-12 col-lg-12 col-xl-12">
+    <div id="JUMP151" class="card fs-6">
+        <div class="card-header bg-dark">
+        <a href="https://itoetc.com/pog/POGME0151.html" target="_blank" class="text-white">Rank 1. ヒロセ</a>
+        </div>
+        <div class="card-body bg-dark">
+<div class="table-responsive">
+<table class="table table-dark table-sm">
+<tbody>
+<tr>
+<th style="width:50px;"></th>
+<th style="width:100px;"></th>
+<th style="width:100px;"></th>
+<th style="width:100px;"></th>
+<th style="width:50px;"></th>
+<th style="width:250px;"></th>
+<th style="width:250px;"></th>
+<th style="width:250px;"></th>
+<th style="width:200px;"></th>
+<th style="width:300px;"></th>
+<th style="width:300px;"></th>
+</tr>
+<tr>
+<td class="text-end bg-dark text-white"></td>
+<td class="text-end bg-dark text-white">28638</td>
+<td class="text-end bg-dark text-white">10000</td>
+<td class="text-end bg-dark text-white">13.13.2.11</td>
+<td class="text-center %SEX_COLOR_BG% %SEX_COLOR_FG%"></td>
+<td class="text-start bg-dark text-white"><a href="#" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="%BROODMARE_URL%" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+</tr>
+<tr>
+<td class="text-end bg-gate6 text-white">1</td>
+<td class="text-end bg-gate6 text-white">7290</td>
+<td class="text-end bg-gate6 text-white">800</td>
+<td class="text-end bg-gate6 text-white">2.2.1.1</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ゾロアストロ" target="_blank" class="text-white">ゾロアストロ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=モーリス" target="_blank" class="text-white">モーリス</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=アルミレーナの2023" target="_blank" class="text-white">アルミレーナ</a></td>
+<td class="text-start bg-gate6 text-white">宮田敬介</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">サンデーレーシング</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">2</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">1200</td>
+<td class="text-end bg-dark text-white">0.0.0.1</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ミラージュノワール" target="_blank" class="text-white">ミラージュノワール</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=キタサンブラック" target="_blank" class="text-white">キタサンブラック</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=サラーブの2023" target="_blank" class="text-white">サラーブ</a></td>
+<td class="text-start bg-dark text-white">宮田敬介</td>
+<td class="text-start bg-dark text-white">ノーザンファーム</td>
+<td class="text-start bg-dark text-white">シルク</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">3</td>
+<td class="text-end bg-gate6 text-white">974</td>
+<td class="text-end bg-gate6 text-white">800</td>
+<td class="text-end bg-gate6 text-white">1.1.0.3</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=エコールナヴァール" target="_blank" class="text-white">エコールナヴァール</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=アドマイヤマーズ" target="_blank" class="text-white">アドマイヤマーズ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ジューヌエコールの2023" target="_blank" class="text-white">ジューヌエコール</a></td>
+<td class="text-start bg-gate6 text-white">森一誠</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">サンデーレーシング</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">4</td>
+<td class="text-end bg-gate6 text-white">2920</td>
+<td class="text-end bg-gate6 text-white">500</td>
+<td class="text-end bg-gate6 text-white">2.3.0.0</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ブレットパス" target="_blank" class="text-white">ブレットパス</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=アルアイン" target="_blank" class="text-white">アルアイン</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=パッシングスルーの2023" target="_blank" class="text-white">パッシングスルー</a></td>
+<td class="text-start bg-gate6 text-white">中内田充</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">キャロットファーム</td>
+</tr><tr>
+<td class="text-end bg-dark text-secondary">5</td>
+<td class="text-end bg-dark text-secondary">0</td>
+<td class="text-end bg-dark text-secondary">500</td>
+<td class="text-end bg-dark text-secondary">0.0.0.0</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-dark text-secondary"><a href="https://www.google.com/search?q=シェリデュース" target="_blank" class="text-secondary">シェリデュース(抹消)</a></td>
+<td class="text-start bg-dark text-secondary"><a href="https://www.google.com/search?q=シルバーステート" target="_blank" class="text-secondary">シルバーステート</a></td>
+<td class="text-start bg-dark text-secondary"><a href="https://www.google.com/search?q=ダストアンドダイヤモンズの2023" target="_blank" class="text-secondary">ダストアンドダイヤモンズ</a></td>
+<td class="text-start bg-dark text-secondary">友道康夫</td>
+<td class="text-start bg-dark text-secondary">ノーザンファーム</td>
+<td class="text-start bg-dark text-secondary">インゼルレーシング</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">6</td>
+<td class="text-end bg-gate6 text-white">1440</td>
+<td class="text-end bg-gate6 text-white">400</td>
+<td class="text-end bg-gate6 text-white">1.3.0.0</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=マゲバスピード" target="_blank" class="text-white">マゲバスピード</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ジャスタウェイ" target="_blank" class="text-white">ジャスタウェイ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=マゲバの2023" target="_blank" class="text-white">マゲバ</a></td>
+<td class="text-start bg-gate6 text-white">藤原英昭</td>
+<td class="text-start bg-gate6 text-white">社台ファーム</td>
+<td class="text-start bg-gate6 text-white">ラ・メール</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">7</td>
+<td class="text-end bg-gate6 text-white">1700</td>
+<td class="text-end bg-gate6 text-white">1200</td>
+<td class="text-end bg-gate6 text-white">1.0.1.0</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=イクシード" target="_blank" class="text-white">イクシード</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=キタサンブラック" target="_blank" class="text-white">キタサンブラック</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=シャトーブランシュの2023" target="_blank" class="text-white">シャトーブランシュ</a></td>
+<td class="text-start bg-gate6 text-white">木村哲也</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">シルク</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">8</td>
+<td class="text-end bg-gate6 text-white">1210</td>
+<td class="text-end bg-gate6 text-white">1500</td>
+<td class="text-end bg-gate6 text-white">1.1.0.0</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=アローメタル" target="_blank" class="text-white">アローメタル</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=キズナ" target="_blank" class="text-white">キズナ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ミスベジルの2023" target="_blank" class="text-white">ミスベジル</a></td>
+<td class="text-start bg-gate6 text-white">木村哲也</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">シルク</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">9</td>
+<td class="text-end bg-gate6 text-white">1060</td>
+<td class="text-end bg-gate6 text-white">700</td>
+<td class="text-end bg-gate6 text-white">1.0.0.1</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ロスパレドネス" target="_blank" class="text-white">ロスパレドネス</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ドレフォン" target="_blank" class="text-white">ドレフォン</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=アロマティコの2023" target="_blank" class="text-white">アロマティコ</a></td>
+<td class="text-start bg-gate6 text-white">木村哲也</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">サンデーレーシング</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">10</td>
+<td class="text-end bg-gate6 text-white">4990</td>
+<td class="text-end bg-gate6 text-white">1300</td>
+<td class="text-end bg-gate6 text-white">1.3.0.0</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ベレシート" target="_blank" class="text-white">ベレシート</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=エピファネイア" target="_blank" class="text-white">エピファネイア</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=クロノジェネシスの2023" target="_blank" class="text-white">クロノジェネシス</a></td>
+<td class="text-start bg-gate6 text-white">斉藤崇史</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">サンデーレーシング</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">11</td>
+<td class="text-end bg-gate6 text-white">6970</td>
+<td class="text-end bg-gate6 text-white">700</td>
+<td class="text-end bg-gate6 text-white">3.0.0.0</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=コンジェスタス" target="_blank" class="text-white">コンジェスタス</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=コントレイル" target="_blank" class="text-white">コントレイル</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=キラモサの2023" target="_blank" class="text-white">キラモサ</a></td>
+<td class="text-start bg-gate6 text-white">高野友和</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">シルク</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">12</td>
+<td class="text-end bg-dark text-white">84</td>
+<td class="text-end bg-dark text-white">400</td>
+<td class="text-end bg-dark text-white">0.0.0.5</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=アトリ" target="_blank" class="text-white">アトリ</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=シスキン" target="_blank" class="text-white">シスキン</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ウィキッドリーパーフェクトの2023" target="_blank" class="text-white">ウィキッドリーパーフェクト</a></td>
+<td class="text-start bg-dark text-white">清水久詞</td>
+<td class="text-start bg-dark text-white">ノーザンファーム</td>
+<td class="text-start bg-dark text-white">シルク</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br/>
+</div>
+</div>
+</div><!--//col-->
+<div class="col-sm-12 col-lg-12 col-xl-12">
+    <div id="JUMP170" class="card fs-6">
+        <div class="card-header bg-dark">
+        <a href="https://itoetc.com/pog/POGME0170.html" target="_blank" class="text-white">Rank 2. アイヤマ</a>
+        </div>
+        <div class="card-body bg-dark">
+<div class="table-responsive">
+<table class="table table-dark table-sm">
+<tbody>
+<tr>
+<th style="width:50px;"></th>
+<th style="width:100px;"></th>
+<th style="width:100px;"></th>
+<th style="width:100px;"></th>
+<th style="width:50px;"></th>
+<th style="width:250px;"></th>
+<th style="width:250px;"></th>
+<th style="width:250px;"></th>
+<th style="width:200px;"></th>
+<th style="width:300px;"></th>
+<th style="width:300px;"></th>
+</tr>
+<tr>
+<td class="text-end bg-dark text-white"></td>
+<td class="text-end bg-dark text-white">27314</td>
+<td class="text-end bg-dark text-white">10000</td>
+<td class="text-end bg-dark text-white">12.7.4.43</td>
+<td class="text-center %SEX_COLOR_BG% %SEX_COLOR_FG%"></td>
+<td class="text-start bg-dark text-white"><a href="#" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="%BROODMARE_URL%" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+</tr>
+<tr>
+<td class="text-end bg-gate6 text-white">1</td>
+<td class="text-end bg-gate6 text-white">2198</td>
+<td class="text-end bg-gate6 text-white">600</td>
+<td class="text-end bg-gate6 text-white">2.0.0.5</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=シーミハットク" target="_blank" class="text-white">シーミハットク</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=オルフェーヴル" target="_blank" class="text-white">オルフェーヴル</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ブルーミンバーの2023" target="_blank" class="text-white">ブルーミンバー</a></td>
+<td class="text-start bg-gate6 text-white">寺島良</td>
+<td class="text-start bg-gate6 text-white">社台ファーム</td>
+<td class="text-start bg-gate6 text-white">いとはんホールディングス</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">2</td>
+<td class="text-end bg-gate6 text-white">1080</td>
+<td class="text-end bg-gate6 text-white">600</td>
+<td class="text-end bg-gate6 text-white">1.1.1.2</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ショウナンバンライ" target="_blank" class="text-white">ショウナンバンライ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=オルフェーヴル" target="_blank" class="text-white">オルフェーヴル</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=シュガーショックの2023" target="_blank" class="text-white">シュガーショック</a></td>
+<td class="text-start bg-gate6 text-white">松下武士</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">国本　哲秀</td>
+</tr><tr>
+<td class="text-end bg-dark text-secondary">3</td>
+<td class="text-end bg-dark text-secondary">0</td>
+<td class="text-end bg-dark text-secondary">600</td>
+<td class="text-end bg-dark text-secondary">0.0.0.1</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-dark text-secondary"><a href="https://www.google.com/search?q=エバーグレイト" target="_blank" class="text-secondary">エバーグレイト(抹消)</a></td>
+<td class="text-start bg-dark text-secondary"><a href="https://www.google.com/search?q=オルフェーヴル" target="_blank" class="text-secondary">オルフェーヴル</a></td>
+<td class="text-start bg-dark text-secondary"><a href="https://www.google.com/search?q=ベアインマインドの2023" target="_blank" class="text-secondary">ベアインマインド</a></td>
+<td class="text-start bg-dark text-secondary">藤岡健一</td>
+<td class="text-start bg-dark text-secondary">ノーザンファーム</td>
+<td class="text-start bg-dark text-secondary">宇田　豊</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">4</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">700</td>
+<td class="text-end bg-dark text-white">0.0.0.0</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=アルガルヴェ" target="_blank" class="text-white">アルガルヴェ</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=インディチャンプ" target="_blank" class="text-white">インディチャンプ</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ロカの2023" target="_blank" class="text-white">ロカ</a></td>
+<td class="text-start bg-dark text-white">木村哲也</td>
+<td class="text-start bg-dark text-white">ノーザンファーム</td>
+<td class="text-start bg-dark text-white">サンデーレーシング</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">5</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">700</td>
+<td class="text-end bg-dark text-white">0.0.0.3</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ブロンザイト" target="_blank" class="text-white">ブロンザイト</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=クリソベリル" target="_blank" class="text-white">クリソベリル</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=クルークハイトの2023" target="_blank" class="text-white">クルークハイト</a></td>
+<td class="text-start bg-dark text-white">福永祐一</td>
+<td class="text-start bg-dark text-white">ノーザンファーム</td>
+<td class="text-start bg-dark text-white">キャロットファーム</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">6</td>
+<td class="text-end bg-dark text-white">194</td>
+<td class="text-end bg-dark text-white">400</td>
+<td class="text-end bg-dark text-white">0.0.0.4</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=マイネルホウセン" target="_blank" class="text-white">マイネルホウセン</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ゴールドシップ" target="_blank" class="text-white">ゴールドシップ</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=レオンドーロの2023" target="_blank" class="text-white">レオンドーロ</a></td>
+<td class="text-start bg-dark text-white">清水久詞</td>
+<td class="text-start bg-dark text-white">ビッグレッドファーム</td>
+<td class="text-start bg-dark text-white">サラブレッドクラブ・ラフィアン</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">7</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">600</td>
+<td class="text-end bg-dark text-white">0.0.0.2</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=プリュイドール" target="_blank" class="text-white">プリュイドール</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=オルフェーヴル" target="_blank" class="text-white">オルフェーヴル</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=レインオンザデューンの2023" target="_blank" class="text-white">レインオンザデューン</a></td>
+<td class="text-start bg-dark text-white">矢作芳人</td>
+<td class="text-start bg-dark text-white">飛野牧場</td>
+<td class="text-start bg-dark text-white">DMMﾄﾞﾘｰﾑｸﾗﾌﾞ</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">8</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">400</td>
+<td class="text-end bg-dark text-white">0.0.0.4</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=インテンスゲイズ" target="_blank" class="text-white">インテンスゲイズ</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ゴールドシップ" target="_blank" class="text-white">ゴールドシップ</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=アイオープナーの2023" target="_blank" class="text-white">アイオープナー</a></td>
+<td class="text-start bg-dark text-white">矢嶋大樹</td>
+<td class="text-start bg-dark text-white">ビッグレッドファーム</td>
+<td class="text-start bg-dark text-white">サラブレッドクラブ・ラフィアン</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">9</td>
+<td class="text-end bg-gate6 text-white">2500</td>
+<td class="text-end bg-gate6 text-white">700</td>
+<td class="text-end bg-gate6 text-white">2.2.1.0</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ブレナヴォン" target="_blank" class="text-white">ブレナヴォン</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=インディチャンプ" target="_blank" class="text-white">インディチャンプ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ラナモンの2023" target="_blank" class="text-white">ラナモン</a></td>
+<td class="text-start bg-gate6 text-white">池江泰寿</td>
+<td class="text-start bg-gate6 text-white">社台コーポレーション白老ファーム</td>
+<td class="text-start bg-gate6 text-white">社台レースホース</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">10</td>
+<td class="text-end bg-dark text-white">75</td>
+<td class="text-end bg-dark text-white">700</td>
+<td class="text-end bg-dark text-white">0.0.0.6</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=アンデルストープ" target="_blank" class="text-white">アンデルストープ</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=インディチャンプ" target="_blank" class="text-white">インディチャンプ</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ダンシングクイーンの2023" target="_blank" class="text-white">ダンシングクイーン</a></td>
+<td class="text-start bg-dark text-white">宮田敬介</td>
+<td class="text-start bg-dark text-white">若林　順一</td>
+<td class="text-start bg-dark text-white">ノルマンディーサラブレッドレーシング</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">11</td>
+<td class="text-end bg-dark text-white">349</td>
+<td class="text-end bg-dark text-white">700</td>
+<td class="text-end bg-dark text-white">0.0.1.3</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=マルシュボヌール" target="_blank" class="text-white">マルシュボヌール</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ドレフォン" target="_blank" class="text-white">ドレフォン</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=マルシュロレーヌの2023" target="_blank" class="text-white">マルシュロレーヌ</a></td>
+<td class="text-start bg-dark text-white">矢作芳人</td>
+<td class="text-start bg-dark text-white">ノーザンファーム</td>
+<td class="text-start bg-dark text-white">キャロットファーム</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">12</td>
+<td class="text-end bg-gate6 text-white">1960</td>
+<td class="text-end bg-gate6 text-white">600</td>
+<td class="text-end bg-gate6 text-white">2.2.0.2</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ペンダント" target="_blank" class="text-white">ペンダント</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=オルフェーヴル" target="_blank" class="text-white">オルフェーヴル</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=スパイラルステップの2023" target="_blank" class="text-white">スパイラルステップ</a></td>
+<td class="text-start bg-gate6 text-white">池江泰寿</td>
+<td class="text-start bg-gate6 text-white">レイクヴィラファーム</td>
+<td class="text-start bg-gate6 text-white">石川　達絵</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">13</td>
+<td class="text-end bg-gate6 text-white">730</td>
+<td class="text-end bg-gate6 text-white">700</td>
+<td class="text-end bg-gate6 text-white">1.0.0.4</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=シェーロドラート" target="_blank" class="text-white">シェーロドラート</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ベンバトル" target="_blank" class="text-white">ベンバトル</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ルシェルドールの2023" target="_blank" class="text-white">ルシェルドール</a></td>
+<td class="text-start bg-gate6 text-white">加藤士津</td>
+<td class="text-start bg-gate6 text-white">ビッグレッドファーム</td>
+<td class="text-start bg-gate6 text-white">サラブレッドクラブ・ラフィアン</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">14</td>
+<td class="text-end bg-gate6 text-white">16650</td>
+<td class="text-end bg-gate6 text-white">700</td>
+<td class="text-end bg-gate6 text-white">3.1.0.1</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=リアライズシリウス" target="_blank" class="text-white">リアライズシリウス</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ポエティックフレア" target="_blank" class="text-white">ポエティックフレア</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=レッドミラベルの2023" target="_blank" class="text-white">レッドミラベル</a></td>
+<td class="text-start bg-gate6 text-white">手塚貴久</td>
+<td class="text-start bg-gate6 text-white">社台ファーム</td>
+<td class="text-start bg-gate6 text-white">今福　洋介</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">15</td>
+<td class="text-end bg-gate6 text-white">1480</td>
+<td class="text-end bg-gate6 text-white">700</td>
+<td class="text-end bg-gate6 text-white">1.1.1.3</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=モルニケ" target="_blank" class="text-white">モルニケ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=インディチャンプ" target="_blank" class="text-white">インディチャンプ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=アビラの2023" target="_blank" class="text-white">アビラ</a></td>
+<td class="text-start bg-gate6 text-white">金成貴史</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">Gﾘﾋﾞｴｰﾙ･ﾚｰｼﾝｸﾞ</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">16</td>
+<td class="text-end bg-dark text-white">98</td>
+<td class="text-end bg-dark text-white">600</td>
+<td class="text-end bg-dark text-white">0.0.0.3</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ヴィスメンティス" target="_blank" class="text-white">ヴィスメンティス</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=オルフェーヴル" target="_blank" class="text-white">オルフェーヴル</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ヴァリディオルの2023" target="_blank" class="text-white">ヴァリディオル</a></td>
+<td class="text-start bg-dark text-white">池江泰寿</td>
+<td class="text-start bg-dark text-white">社台コーポレーション白老ファーム</td>
+<td class="text-start bg-dark text-white">サンデーレーシング</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br/>
+</div>
+</div>
+</div><!--//col-->
+<div class="col-sm-12 col-lg-12 col-xl-12">
+    <div id="JUMP172" class="card fs-6">
+        <div class="card-header bg-dark">
+        <a href="https://itoetc.com/pog/POGME0172.html" target="_blank" class="text-white">Rank 3. ウチダ</a>
+        </div>
+        <div class="card-body bg-dark">
+<div class="table-responsive">
+<table class="table table-dark table-sm">
+<tbody>
+<tr>
+<th style="width:50px;"></th>
+<th style="width:100px;"></th>
+<th style="width:100px;"></th>
+<th style="width:100px;"></th>
+<th style="width:50px;"></th>
+<th style="width:250px;"></th>
+<th style="width:250px;"></th>
+<th style="width:250px;"></th>
+<th style="width:200px;"></th>
+<th style="width:300px;"></th>
+<th style="width:300px;"></th>
+</tr>
+<tr>
+<td class="text-end bg-dark text-white"></td>
+<td class="text-end bg-dark text-white">27030</td>
+<td class="text-end bg-dark text-white">9000</td>
+<td class="text-end bg-dark text-white">9.8.4.23</td>
+<td class="text-center %SEX_COLOR_BG% %SEX_COLOR_FG%"></td>
+<td class="text-start bg-dark text-white"><a href="#" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="%BROODMARE_URL%" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+</tr>
+<tr>
+<td class="text-end bg-gate6 text-white">1</td>
+<td class="text-end bg-gate6 text-white">6510</td>
+<td class="text-end bg-gate6 text-white">1500</td>
+<td class="text-end bg-gate6 text-white">2.2.0.0</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=アウダーシア" target="_blank" class="text-white">アウダーシア</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=キズナ" target="_blank" class="text-white">キズナ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=リリーノーブルの2023" target="_blank" class="text-white">リリーノーブル</a></td>
+<td class="text-start bg-gate6 text-white">手塚貴久</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">サンデーレーシング</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">2</td>
+<td class="text-end bg-gate6 text-white">5700</td>
+<td class="text-end bg-gate6 text-white">1300</td>
+<td class="text-end bg-gate6 text-white">2.0.1.2</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=アランカール" target="_blank" class="text-white">アランカール</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=エピファネイア" target="_blank" class="text-white">エピファネイア</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=シンハライトの2023" target="_blank" class="text-white">シンハライト</a></td>
+<td class="text-start bg-gate6 text-white">斉藤崇史</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">キャロットファーム</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">3</td>
+<td class="text-end bg-gate6 text-white">750</td>
+<td class="text-end bg-gate6 text-white">1200</td>
+<td class="text-end bg-gate6 text-white">1.0.1.0</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=スワーヴマルス" target="_blank" class="text-white">スワーヴマルス</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=キタサンブラック" target="_blank" class="text-white">キタサンブラック</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=アメージングムーンの2023" target="_blank" class="text-white">アメージングムーン</a></td>
+<td class="text-start bg-gate6 text-white">田中博康</td>
+<td class="text-start bg-gate6 text-white">村田牧場</td>
+<td class="text-start bg-gate6 text-white">NICKS</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">4</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">800</td>
+<td class="text-end bg-dark text-white">0.0.0.2</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=トゥルージョワ" target="_blank" class="text-white">トゥルージョワ</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ロードカナロア" target="_blank" class="text-white">ロードカナロア</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ディヴァインラヴの2023" target="_blank" class="text-white">ディヴァインラヴ</a></td>
+<td class="text-start bg-dark text-white">福永祐一</td>
+<td class="text-start bg-dark text-white">グランド牧場</td>
+<td class="text-start bg-dark text-white">モンレーヴ</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">5</td>
+<td class="text-end bg-dark text-white">110</td>
+<td class="text-end bg-dark text-white">700</td>
+<td class="text-end bg-dark text-white">0.0.0.5</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ビタールート" target="_blank" class="text-white">ビタールート</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=インディチャンプ" target="_blank" class="text-white">インディチャンプ</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=トレジャーステイトの2023" target="_blank" class="text-white">トレジャーステイト</a></td>
+<td class="text-start bg-dark text-white">奥村豊</td>
+<td class="text-start bg-dark text-white">ノーザンファーム</td>
+<td class="text-start bg-dark text-white">シルク</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">6</td>
+<td class="text-end bg-dark text-white">131</td>
+<td class="text-end bg-dark text-white">700</td>
+<td class="text-end bg-dark text-white">0.0.0.4</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=アスクブームキセキ" target="_blank" class="text-white">アスクブームキセキ</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=コントレイル" target="_blank" class="text-white">コントレイル</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ストレイトガールの2023" target="_blank" class="text-white">ストレイトガール</a></td>
+<td class="text-start bg-dark text-white">藤原英昭</td>
+<td class="text-start bg-dark text-white">ASK STUD</td>
+<td class="text-start bg-dark text-white">廣崎利洋ＨＤ</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">7</td>
+<td class="text-end bg-gate6 text-white">3620</td>
+<td class="text-end bg-gate6 text-white">400</td>
+<td class="text-end bg-gate6 text-white">2.2.1.1</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ラディアントスター" target="_blank" class="text-white">ラディアントスター</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=サトノアラジン" target="_blank" class="text-white">サトノアラジン</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ミスエリカの2023" target="_blank" class="text-white">ミスエリカ</a></td>
+<td class="text-start bg-gate6 text-white">林徹</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">保坂　和孝</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">8</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">-.-.-.-</td>
+<td class="text-center %SEX_COLOR_BG% %SEX_COLOR_FG%"></td>
+<td class="text-start bg-dark text-white"><a href="#" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ラドラーダの2023" target="_blank" class="text-white">ラドラーダ</a></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+</tr><tr>
+<td class="text-end bg-dark text-white">9</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">400</td>
+<td class="text-end bg-dark text-white">0.0.0.1</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ウインキングリー" target="_blank" class="text-white">ウインキングリー</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ゴールドシップ" target="_blank" class="text-white">ゴールドシップ</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=イクスキューズの2023" target="_blank" class="text-white">イクスキューズ</a></td>
+<td class="text-start bg-dark text-white">長谷川浩</td>
+<td class="text-start bg-dark text-white">コスモヴューファーム</td>
+<td class="text-start bg-dark text-white">ウイン</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">10</td>
+<td class="text-end bg-dark text-white">959</td>
+<td class="text-end bg-dark text-white">600</td>
+<td class="text-end bg-dark text-white">0.3.1.4</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ナムラロダン" target="_blank" class="text-white">ナムラロダン</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ミッキーアイル" target="_blank" class="text-white">ミッキーアイル</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=サンクイーン２の2023" target="_blank" class="text-white">サンクイーン２</a></td>
+<td class="text-start bg-dark text-white">長谷川浩</td>
+<td class="text-start bg-dark text-white">谷川牧場</td>
+<td class="text-start bg-dark text-white">奈村　睦弘</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">11</td>
+<td class="text-end bg-gate6 text-white">9250</td>
+<td class="text-end bg-gate6 text-white">1000</td>
+<td class="text-end bg-gate6 text-white">2.1.0.2</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=カヴァレリッツォ" target="_blank" class="text-white">カヴァレリッツォ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=サートゥルナーリア" target="_blank" class="text-white">サートゥルナーリア</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=バラーディストの2023" target="_blank" class="text-white">バラーディスト</a></td>
+<td class="text-start bg-gate6 text-white">吉岡辰弥</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">シルク</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">12</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">400</td>
+<td class="text-end bg-dark text-white">0.0.0.2</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ウインブリザード" target="_blank" class="text-white">ウインブリザード</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ゴールドシップ" target="_blank" class="text-white">ゴールドシップ</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=エーシンマリポーサの2023" target="_blank" class="text-white">エーシンマリポーサ</a></td>
+<td class="text-start bg-dark text-white">深山雅史</td>
+<td class="text-start bg-dark text-white">コスモヴューファーム</td>
+<td class="text-start bg-dark text-white">ウイン</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br/>
+</div>
+</div>
+</div><!--//col-->
+<div class="col-sm-12 col-lg-12 col-xl-12">
+    <div id="JUMP149" class="card fs-6">
+        <div class="card-header bg-dark">
+        <a href="https://itoetc.com/pog/POGME0149.html" target="_blank" class="text-white">Rank 4. イトウ</a>
+        </div>
+        <div class="card-body bg-dark">
+<div class="table-responsive">
+<table class="table table-dark table-sm">
+<tbody>
+<tr>
+<th style="width:50px;"></th>
+<th style="width:100px;"></th>
+<th style="width:100px;"></th>
+<th style="width:100px;"></th>
+<th style="width:50px;"></th>
+<th style="width:250px;"></th>
+<th style="width:250px;"></th>
+<th style="width:250px;"></th>
+<th style="width:200px;"></th>
+<th style="width:300px;"></th>
+<th style="width:300px;"></th>
+</tr>
+<tr>
+<td class="text-end bg-dark text-white"></td>
+<td class="text-end bg-dark text-white">24940</td>
+<td class="text-end bg-dark text-white">10000</td>
+<td class="text-end bg-dark text-white">15.8.12.32</td>
+<td class="text-center %SEX_COLOR_BG% %SEX_COLOR_FG%"></td>
+<td class="text-start bg-dark text-white"><a href="#" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="%BROODMARE_URL%" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+</tr>
+<tr>
+<td class="text-end bg-gate6 text-white">1</td>
+<td class="text-end bg-gate6 text-white">889</td>
+<td class="text-end bg-gate6 text-white">700</td>
+<td class="text-end bg-gate6 text-white">1.0.1.3</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ムスクレスト" target="_blank" class="text-white">ムスクレスト</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=コントレイル" target="_blank" class="text-white">コントレイル</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ノイーヴァの2023" target="_blank" class="text-white">ノイーヴァ</a></td>
+<td class="text-start bg-gate6 text-white">安田翔伍</td>
+<td class="text-start bg-gate6 text-white">ノースヒルズ</td>
+<td class="text-start bg-gate6 text-white">前田　葉子</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">2</td>
+<td class="text-end bg-gate6 text-white">890</td>
+<td class="text-end bg-gate6 text-white">500</td>
+<td class="text-end bg-gate6 text-white">1.0.2.3</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=オラヴィンリンナ" target="_blank" class="text-white">オラヴィンリンナ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=シルバーステート" target="_blank" class="text-white">シルバーステート</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=サイマーの2023" target="_blank" class="text-white">サイマー</a></td>
+<td class="text-start bg-gate6 text-white">吉岡辰弥</td>
+<td class="text-start bg-gate6 text-white">追分ファーム</td>
+<td class="text-start bg-gate6 text-white">G1ﾚｰｼﾝｸﾞ</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">3</td>
+<td class="text-end bg-gate6 text-white">1590</td>
+<td class="text-end bg-gate6 text-white">900</td>
+<td class="text-end bg-gate6 text-white">1.0.1.1</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=モノポリオ" target="_blank" class="text-white">モノポリオ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=リアルスティール" target="_blank" class="text-white">リアルスティール</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ミスエーニョの2023" target="_blank" class="text-white">ミスエーニョ</a></td>
+<td class="text-start bg-gate6 text-white">森一誠</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">サンデーレーシング</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">4</td>
+<td class="text-end bg-gate6 text-white">5940</td>
+<td class="text-end bg-gate6 text-white">1500</td>
+<td class="text-end bg-gate6 text-white">3.0.1.1</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ドリームコア" target="_blank" class="text-white">ドリームコア</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=キズナ" target="_blank" class="text-white">キズナ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ノームコアの2023" target="_blank" class="text-white">ノームコア</a></td>
+<td class="text-start bg-gate6 text-white">萩原清</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">吉田　勝己</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">5</td>
+<td class="text-end bg-gate6 text-white">1616</td>
+<td class="text-end bg-gate6 text-white">700</td>
+<td class="text-end bg-gate6 text-white">1.3.1.4</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=トライアンフパス" target="_blank" class="text-white">トライアンフパス</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ベンバトル" target="_blank" class="text-white">ベンバトル</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=エントリーチケットの2023" target="_blank" class="text-white">エントリーチケット</a></td>
+<td class="text-start bg-gate6 text-white">宮徹</td>
+<td class="text-start bg-gate6 text-white">ビッグレッドファーム</td>
+<td class="text-start bg-gate6 text-white">サラブレッドクラブ・ラフィアン</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">6</td>
+<td class="text-end bg-gate6 text-white">2011</td>
+<td class="text-end bg-gate6 text-white">1200</td>
+<td class="text-end bg-gate6 text-white">2.1.0.1</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ファムマルキーズ" target="_blank" class="text-white">ファムマルキーズ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=キタサンブラック" target="_blank" class="text-white">キタサンブラック</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ダイワダッチェスの2023" target="_blank" class="text-white">ダイワダッチェス</a></td>
+<td class="text-start bg-gate6 text-white">大久保龍</td>
+<td class="text-start bg-gate6 text-white">社台コーポレーション白老ファーム</td>
+<td class="text-start bg-gate6 text-white">吉田　照哉</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">7</td>
+<td class="text-end bg-gate6 text-white">1491</td>
+<td class="text-end bg-gate6 text-white">800</td>
+<td class="text-end bg-gate6 text-white">1.0.0.3</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=パープルガーネット" target="_blank" class="text-white">パープルガーネット</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=モーリス" target="_blank" class="text-white">モーリス</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=コーディエライトの2023" target="_blank" class="text-white">コーディエライト</a></td>
+<td class="text-start bg-gate6 text-white">森一誠</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">G1ﾚｰｼﾝｸﾞ</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">8</td>
+<td class="text-end bg-gate6 text-white">1404</td>
+<td class="text-end bg-gate6 text-white">700</td>
+<td class="text-end bg-gate6 text-white">1.2.1.5</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=リヒトミューレ" target="_blank" class="text-white">リヒトミューレ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ポエティックフレア" target="_blank" class="text-white">ポエティックフレア</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ラシンティランテの2023" target="_blank" class="text-white">ラシンティランテ</a></td>
+<td class="text-start bg-gate6 text-white">中村直也</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">サンデーレーシング</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">9</td>
+<td class="text-end bg-gate6 text-white">995</td>
+<td class="text-end bg-gate6 text-white">800</td>
+<td class="text-end bg-gate6 text-white">1.1.1.4</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=アンディムジーク" target="_blank" class="text-white">アンディムジーク</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=アドマイヤマーズ" target="_blank" class="text-white">アドマイヤマーズ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ターフェルムジークの2023" target="_blank" class="text-white">ターフェルムジーク</a></td>
+<td class="text-start bg-gate6 text-white">渡辺薫彦</td>
+<td class="text-start bg-gate6 text-white">社台コーポレーション白老ファーム</td>
+<td class="text-start bg-gate6 text-white">G1ﾚｰｼﾝｸﾞ</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">10</td>
+<td class="text-end bg-gate6 text-white">5880</td>
+<td class="text-end bg-gate6 text-white">1300</td>
+<td class="text-end bg-gate6 text-white">2.0.3.2</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=スマートプリエール" target="_blank" class="text-white">スマートプリエール</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=エピファネイア" target="_blank" class="text-white">エピファネイア</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=スマートレイアーの2023" target="_blank" class="text-white">スマートレイアー</a></td>
+<td class="text-start bg-gate6 text-white">大久保龍</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">大川　徹</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">11</td>
+<td class="text-end bg-gate6 text-white">2234</td>
+<td class="text-end bg-gate6 text-white">500</td>
+<td class="text-end bg-gate6 text-white">1.1.1.2</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=リアライズルミナス" target="_blank" class="text-white">リアライズルミナス</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=シルバーステート" target="_blank" class="text-white">シルバーステート</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ジュルビアンの2023" target="_blank" class="text-white">ジュルビアン</a></td>
+<td class="text-start bg-gate6 text-white">橋口慎介</td>
+<td class="text-start bg-gate6 text-white">大柳ファーム</td>
+<td class="text-start bg-gate6 text-white">今福　洋介</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">12</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">400</td>
+<td class="text-end bg-dark text-white">0.0.0.3</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ゼフィルス" target="_blank" class="text-white">ゼフィルス</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=シスキン" target="_blank" class="text-white">シスキン</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ケアレスウィスパーの2023" target="_blank" class="text-white">ケアレスウィスパー</a></td>
+<td class="text-start bg-dark text-white">橋口慎介</td>
+<td class="text-start bg-dark text-white">ノーザンファーム</td>
+<td class="text-start bg-dark text-white">アクロス都市開発</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br/>
+</div>
+</div>
+</div><!--//col-->
+<div class="col-sm-12 col-lg-12 col-xl-12">
+    <div id="JUMP154" class="card fs-6">
+        <div class="card-header bg-dark">
+        <a href="https://itoetc.com/pog/POGME0154.html" target="_blank" class="text-white">Rank 5. ナカジマ</a>
+        </div>
+        <div class="card-body bg-dark">
+<div class="table-responsive">
+<table class="table table-dark table-sm">
+<tbody>
+<tr>
+<th style="width:50px;"></th>
+<th style="width:100px;"></th>
+<th style="width:100px;"></th>
+<th style="width:100px;"></th>
+<th style="width:50px;"></th>
+<th style="width:250px;"></th>
+<th style="width:250px;"></th>
+<th style="width:250px;"></th>
+<th style="width:200px;"></th>
+<th style="width:300px;"></th>
+<th style="width:300px;"></th>
+</tr>
+<tr>
+<td class="text-end bg-dark text-white"></td>
+<td class="text-end bg-dark text-white">23779</td>
+<td class="text-end bg-dark text-white">10000</td>
+<td class="text-end bg-dark text-white">9.4.6.22</td>
+<td class="text-center %SEX_COLOR_BG% %SEX_COLOR_FG%"></td>
+<td class="text-start bg-dark text-white"><a href="#" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="%BROODMARE_URL%" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+</tr>
+<tr>
+<td class="text-end bg-gate6 text-white">1</td>
+<td class="text-end bg-gate6 text-white">3570</td>
+<td class="text-end bg-gate6 text-white">1200</td>
+<td class="text-end bg-gate6 text-white">2.1.2.0</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ブラックオリンピア" target="_blank" class="text-white">ブラックオリンピア</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=キタサンブラック" target="_blank" class="text-white">キタサンブラック</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ピノの2023" target="_blank" class="text-white">ピノ</a></td>
+<td class="text-start bg-gate6 text-white">友道康夫</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">サンデーレーシング</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">2</td>
+<td class="text-end bg-gate6 text-white">3850</td>
+<td class="text-end bg-gate6 text-white">600</td>
+<td class="text-end bg-gate6 text-white">2.0.0.2</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ショウナンガルフ" target="_blank" class="text-white">ショウナンガルフ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ハービンジャー" target="_blank" class="text-white">ハービンジャー</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ミカリーニョの2023" target="_blank" class="text-white">ミカリーニョ</a></td>
+<td class="text-start bg-gate6 text-white">須貝尚介</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">国本　哲秀</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">3</td>
+<td class="text-end bg-gate6 text-white">1160</td>
+<td class="text-end bg-gate6 text-white">500</td>
+<td class="text-end bg-gate6 text-white">1.0.0.1</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ディバインウインド" target="_blank" class="text-white">ディバインウインド</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=スワーヴリチャード" target="_blank" class="text-white">スワーヴリチャード</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ストロベリームーンの2023" target="_blank" class="text-white">ストロベリームーン</a></td>
+<td class="text-start bg-gate6 text-white">堀宣行</td>
+<td class="text-start bg-gate6 text-white">社台ファーム</td>
+<td class="text-start bg-gate6 text-white">NICKS</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">4</td>
+<td class="text-end bg-dark text-white">110</td>
+<td class="text-end bg-dark text-white">700</td>
+<td class="text-end bg-dark text-white">0.0.0.5</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=アウェイクネス" target="_blank" class="text-white">アウェイクネス</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=Frankel" target="_blank" class="text-white">Frankel</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=Waldjagdの2023" target="_blank" class="text-white">Waldjagd</a></td>
+<td class="text-start bg-dark text-white">矢作芳人</td>
+<td class="text-start bg-dark text-white">S.A.R.L. Ecurie Calarec</td>
+<td class="text-start bg-dark text-white">藤田　晋</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">5</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">1000</td>
+<td class="text-end bg-dark text-white">0.0.0.0</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=マジックパレス" target="_blank" class="text-white">マジックパレス</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=サートゥルナーリア" target="_blank" class="text-white">サートゥルナーリア</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=フローレスマジックの2023" target="_blank" class="text-white">フローレスマジック</a></td>
+<td class="text-start bg-dark text-white">木村哲也</td>
+<td class="text-start bg-dark text-white">ノーザンファーム</td>
+<td class="text-start bg-dark text-white">サンデーレーシング</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">6</td>
+<td class="text-end bg-gate6 text-white">770</td>
+<td class="text-end bg-gate6 text-white">700</td>
+<td class="text-end bg-gate6 text-white">1.0.1.1</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ランズダウンロード" target="_blank" class="text-white">ランズダウンロード</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=コントレイル" target="_blank" class="text-white">コントレイル</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=シユーマの2023" target="_blank" class="text-white">シユーマ</a></td>
+<td class="text-start bg-gate6 text-white">木村哲也</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">サンデーレーシング</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">7</td>
+<td class="text-end bg-dark text-white">169</td>
+<td class="text-end bg-dark text-white">800</td>
+<td class="text-end bg-dark text-white">0.0.0.2</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=タフクッキー" target="_blank" class="text-white">タフクッキー</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ロードカナロア" target="_blank" class="text-white">ロードカナロア</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ウーマンズハートの2023" target="_blank" class="text-white">ウーマンズハート</a></td>
+<td class="text-start bg-dark text-white">中内田充</td>
+<td class="text-start bg-dark text-white">ダーレー・ジャパン・ファーム</td>
+<td class="text-start bg-dark text-white">H.H.ｼｪｲｸ･ﾓﾊﾒﾄﾞ</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">8</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">1300</td>
+<td class="text-end bg-dark text-white">0.0.0.2</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ディースカウ" target="_blank" class="text-white">ディースカウ</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=エピファネイア" target="_blank" class="text-white">エピファネイア</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ラチェーヴェの2023" target="_blank" class="text-white">ラチェーヴェ</a></td>
+<td class="text-start bg-dark text-white">須貝尚介</td>
+<td class="text-start bg-dark text-white">岡田スタツド</td>
+<td class="text-start bg-dark text-white">金子真人ホールディングス</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">9</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">1300</td>
+<td class="text-end bg-dark text-white">0.0.0.4</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ダノンオブアイデア" target="_blank" class="text-white">ダノンオブアイデア</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=エピファネイア" target="_blank" class="text-white">エピファネイア</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=コンペティションオブアイデアズの2023" target="_blank" class="text-white">コンペティションオブアイデアズ</a></td>
+<td class="text-start bg-dark text-white">藤原英昭</td>
+<td class="text-start bg-dark text-white">社台ファーム</td>
+<td class="text-start bg-dark text-white">ダノックス</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">10</td>
+<td class="text-end bg-dark text-white">430</td>
+<td class="text-end bg-dark text-white">500</td>
+<td class="text-end bg-dark text-white">0.1.1.1</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=セスティーナ" target="_blank" class="text-white">セスティーナ</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=マインドユアビスケッツ" target="_blank" class="text-white">マインドユアビスケッツ</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=アムールポエジーの2023" target="_blank" class="text-white">アムールポエジー</a></td>
+<td class="text-start bg-dark text-white">須貝尚介</td>
+<td class="text-start bg-dark text-white">社台ファーム</td>
+<td class="text-start bg-dark text-white">金子真人ホールディングス</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">11</td>
+<td class="text-end bg-gate6 text-white">13474</td>
+<td class="text-end bg-gate6 text-white">700</td>
+<td class="text-end bg-gate6 text-white">3.2.1.2</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ダイヤモンドノット" target="_blank" class="text-white">ダイヤモンドノット</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ブリックスアンドモルタル" target="_blank" class="text-white">ブリックスアンドモルタル</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=エンドレスノットの2023" target="_blank" class="text-white">エンドレスノット</a></td>
+<td class="text-start bg-gate6 text-white">福永祐一</td>
+<td class="text-start bg-gate6 text-white">坂東牧場</td>
+<td class="text-start bg-gate6 text-white">金子真人ホールディングス</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">12</td>
+<td class="text-end bg-dark text-white">246</td>
+<td class="text-end bg-dark text-white">700</td>
+<td class="text-end bg-dark text-white">0.0.1.2</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ホウオウストライク" target="_blank" class="text-white">ホウオウストライク</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=Good Magic" target="_blank" class="text-white">Good Magic</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=Nightlife Babyの2023" target="_blank" class="text-white">Nightlife Baby</a></td>
+<td class="text-start bg-dark text-white">池江泰寿</td>
+<td class="text-start bg-dark text-white">Robert Losey & Good Magic Syndicate</td>
+<td class="text-start bg-dark text-white">小笹　芳央</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br/>
+</div>
+</div>
+</div><!--//col-->
+<div class="col-sm-12 col-lg-12 col-xl-12">
+    <div id="JUMP162" class="card fs-6">
+        <div class="card-header bg-dark">
+        <a href="https://itoetc.com/pog/POGME0162.html" target="_blank" class="text-white">Rank 6. ヤマダ</a>
+        </div>
+        <div class="card-body bg-dark">
+<div class="table-responsive">
+<table class="table table-dark table-sm">
+<tbody>
+<tr>
+<th style="width:50px;"></th>
+<th style="width:100px;"></th>
+<th style="width:100px;"></th>
+<th style="width:100px;"></th>
+<th style="width:50px;"></th>
+<th style="width:250px;"></th>
+<th style="width:250px;"></th>
+<th style="width:250px;"></th>
+<th style="width:200px;"></th>
+<th style="width:300px;"></th>
+<th style="width:300px;"></th>
+</tr>
+<tr>
+<td class="text-end bg-dark text-white"></td>
+<td class="text-end bg-dark text-white">11017</td>
+<td class="text-end bg-dark text-white">8800</td>
+<td class="text-end bg-dark text-white">7.10.2.13</td>
+<td class="text-center %SEX_COLOR_BG% %SEX_COLOR_FG%"></td>
+<td class="text-start bg-dark text-white"><a href="#" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="%BROODMARE_URL%" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+</tr>
+<tr>
+<td class="text-end bg-dark text-white">1</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">700</td>
+<td class="text-end bg-dark text-white">0.0.0.1</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=クールマイユール" target="_blank" class="text-white">クールマイユール</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=コントレイル" target="_blank" class="text-white">コントレイル</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ステラスターの2023" target="_blank" class="text-white">ステラスター</a></td>
+<td class="text-start bg-dark text-white">福永祐一</td>
+<td class="text-start bg-dark text-white">ノースヒルズ</td>
+<td class="text-start bg-dark text-white">ノースヒルズ</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">2</td>
+<td class="text-end bg-gate6 text-white">3650</td>
+<td class="text-end bg-gate6 text-white">1300</td>
+<td class="text-end bg-gate6 text-white">2.0.0.0</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=フィロステファニ" target="_blank" class="text-white">フィロステファニ(抹消)</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=エピファネイア" target="_blank" class="text-white">エピファネイア</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=スキアの2023" target="_blank" class="text-white">スキア</a></td>
+<td class="text-start bg-gate6 text-white">中内田充</td>
+<td class="text-start bg-gate6 text-white">社台ファーム</td>
+<td class="text-start bg-gate6 text-white">社台レースホース</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">3</td>
+<td class="text-end bg-dark text-white">430</td>
+<td class="text-end bg-dark text-white">1000</td>
+<td class="text-end bg-dark text-white">0.1.1.1</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ペルウィクトール" target="_blank" class="text-white">ペルウィクトール</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=サートゥルナーリア" target="_blank" class="text-white">サートゥルナーリア</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ウィクトーリアの2023" target="_blank" class="text-white">ウィクトーリア</a></td>
+<td class="text-start bg-dark text-white">宮田敬介</td>
+<td class="text-start bg-dark text-white">ノーザンファーム</td>
+<td class="text-start bg-dark text-white">シルク</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">4</td>
+<td class="text-end bg-dark text-white">349</td>
+<td class="text-end bg-dark text-white">700</td>
+<td class="text-end bg-dark text-white">0.0.1.2</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ダノンミッドナイト" target="_blank" class="text-white">ダノンミッドナイト</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=コントレイル" target="_blank" class="text-white">コントレイル</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=モアナの2023" target="_blank" class="text-white">モアナ</a></td>
+<td class="text-start bg-dark text-white">中内田充</td>
+<td class="text-start bg-dark text-white">ノーザンファーム</td>
+<td class="text-start bg-dark text-white">ダノックス</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">5</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">700</td>
+<td class="text-end bg-dark text-white">0.0.0.2</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=スカイドリーマー" target="_blank" class="text-white">スカイドリーマー</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=コントレイル" target="_blank" class="text-white">コントレイル</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=フォローアドリームの2023" target="_blank" class="text-white">フォローアドリーム</a></td>
+<td class="text-start bg-dark text-white">木村哲也</td>
+<td class="text-start bg-dark text-white">ノースヒルズ</td>
+<td class="text-start bg-dark text-white">前田　幸大</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">6</td>
+<td class="text-end bg-gate6 text-white">1814</td>
+<td class="text-end bg-gate6 text-white">700</td>
+<td class="text-end bg-gate6 text-white">2.1.0.2</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=マジョレルブルー" target="_blank" class="text-white">マジョレルブルー</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=コントレイル" target="_blank" class="text-white">コントレイル</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ブルーミングアレーの2023" target="_blank" class="text-white">ブルーミングアレー</a></td>
+<td class="text-start bg-gate6 text-white">友道康夫</td>
+<td class="text-start bg-gate6 text-white">社台ファーム</td>
+<td class="text-start bg-gate6 text-white">社台レースホース</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">7</td>
+<td class="text-end bg-gate6 text-white">971</td>
+<td class="text-end bg-gate6 text-white">1200</td>
+<td class="text-end bg-gate6 text-white">1.1.0.1</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ストロベリーツリー" target="_blank" class="text-white">ストロベリーツリー</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=キタサンブラック" target="_blank" class="text-white">キタサンブラック</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ウィンターコスモスの2023" target="_blank" class="text-white">ウィンターコスモス</a></td>
+<td class="text-start bg-gate6 text-white">中内田充</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">金子真人ホールディングス</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">8</td>
+<td class="text-end bg-gate6 text-white">1024</td>
+<td class="text-end bg-gate6 text-white">1300</td>
+<td class="text-end bg-gate6 text-white">1.1.0.2</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=カモンメーン" target="_blank" class="text-white">カモンメーン</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=エピファネイア" target="_blank" class="text-white">エピファネイア</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ホームカミングクイーンの2023" target="_blank" class="text-white">ホームカミングクイーン</a></td>
+<td class="text-start bg-gate6 text-white">杉山晴紀</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">藤田　晋</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">9</td>
+<td class="text-end bg-dark text-white">1059</td>
+<td class="text-end bg-dark text-white">500</td>
+<td class="text-end bg-dark text-white">0.4.0.1</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=アイムイン" target="_blank" class="text-white">アイムイン</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=シルバーステート" target="_blank" class="text-white">シルバーステート</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ツルマルワンピースの2023" target="_blank" class="text-white">ツルマルワンピース</a></td>
+<td class="text-start bg-dark text-white">加藤征弘</td>
+<td class="text-start bg-dark text-white">ノーザンファーム</td>
+<td class="text-start bg-dark text-white">平田　修</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">10</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">-.-.-.-</td>
+<td class="text-center %SEX_COLOR_BG% %SEX_COLOR_FG%"></td>
+<td class="text-start bg-dark text-white"><a href="#" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ラッドルチェンドの2023" target="_blank" class="text-white">ラッドルチェンド</a></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+</tr><tr>
+<td class="text-end bg-dark text-white">11</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">-.-.-.-</td>
+<td class="text-center %SEX_COLOR_BG% %SEX_COLOR_FG%"></td>
+<td class="text-start bg-dark text-white"><a href="#" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=マリアヴェロニカの2023" target="_blank" class="text-white">マリアヴェロニカ</a></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">12</td>
+<td class="text-end bg-gate6 text-white">1720</td>
+<td class="text-end bg-gate6 text-white">700</td>
+<td class="text-end bg-gate6 text-white">1.2.0.1</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=スウィッチインラヴ" target="_blank" class="text-white">スウィッチインラヴ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=コントレイル" target="_blank" class="text-white">コントレイル</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=スウィッチインタイムの2023" target="_blank" class="text-white">スウィッチインタイム</a></td>
+<td class="text-start bg-gate6 text-white">矢作芳人</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">DMMﾄﾞﾘｰﾑｸﾗﾌﾞ</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br/>
+</div>
+</div>
+</div><!--//col-->
+<div class="col-sm-12 col-lg-12 col-xl-12">
+    <div id="JUMP160" class="card fs-6">
+        <div class="card-header bg-dark">
+        <a href="https://itoetc.com/pog/POGME0160.html" target="_blank" class="text-white">Rank 7. マスター</a>
+        </div>
+        <div class="card-body bg-dark">
+<div class="table-responsive">
+<table class="table table-dark table-sm">
+<tbody>
+<tr>
+<th style="width:50px;"></th>
+<th style="width:100px;"></th>
+<th style="width:100px;"></th>
+<th style="width:100px;"></th>
+<th style="width:50px;"></th>
+<th style="width:250px;"></th>
+<th style="width:250px;"></th>
+<th style="width:250px;"></th>
+<th style="width:200px;"></th>
+<th style="width:300px;"></th>
+<th style="width:300px;"></th>
+</tr>
+<tr>
+<td class="text-end bg-dark text-white"></td>
+<td class="text-end bg-dark text-white">10950</td>
+<td class="text-end bg-dark text-white">10000</td>
+<td class="text-end bg-dark text-white">7.7.9.24</td>
+<td class="text-center %SEX_COLOR_BG% %SEX_COLOR_FG%"></td>
+<td class="text-start bg-dark text-white"><a href="#" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="%BROODMARE_URL%" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+</tr>
+<tr>
+<td class="text-end bg-gate6 text-white">1</td>
+<td class="text-end bg-gate6 text-white">1800</td>
+<td class="text-end bg-gate6 text-white">1300</td>
+<td class="text-end bg-gate6 text-white">1.1.1.1</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=サレジオ" target="_blank" class="text-white">サレジオ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=エピファネイア" target="_blank" class="text-white">エピファネイア</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=サラキアの2023" target="_blank" class="text-white">サラキア</a></td>
+<td class="text-start bg-gate6 text-white">田中博康</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">シルク</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">2</td>
+<td class="text-end bg-dark text-white">730</td>
+<td class="text-end bg-dark text-white">1200</td>
+<td class="text-end bg-dark text-white">0.2.2.2</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ブラックコーラル" target="_blank" class="text-white">ブラックコーラル</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=キタサンブラック" target="_blank" class="text-white">キタサンブラック</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=アドマイヤマリンの2023" target="_blank" class="text-white">アドマイヤマリン</a></td>
+<td class="text-start bg-dark text-white">清水久詞</td>
+<td class="text-start bg-dark text-white">ノーザンファーム</td>
+<td class="text-start bg-dark text-white">サンデーレーシング</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">3</td>
+<td class="text-end bg-gate6 text-white">2024</td>
+<td class="text-end bg-gate6 text-white">1200</td>
+<td class="text-end bg-gate6 text-white">2.0.1.2</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=チャリングクロス" target="_blank" class="text-white">チャリングクロス</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=キタサンブラック" target="_blank" class="text-white">キタサンブラック</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ライジングクロスの2023" target="_blank" class="text-white">ライジングクロス</a></td>
+<td class="text-start bg-gate6 text-white">奥村武</td>
+<td class="text-start bg-gate6 text-white">坂東牧場</td>
+<td class="text-start bg-gate6 text-white">サンデーレーシング</td>
+</tr><tr>
+<td class="text-end bg-dark text-secondary">4</td>
+<td class="text-end bg-dark text-secondary">0</td>
+<td class="text-end bg-dark text-secondary">700</td>
+<td class="text-end bg-dark text-secondary">0.0.0.3</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-secondary"><a href="https://www.google.com/search?q=アスピラシオン" target="_blank" class="text-secondary">アスピラシオン(抹消)</a></td>
+<td class="text-start bg-dark text-secondary"><a href="https://www.google.com/search?q=コントレイル" target="_blank" class="text-secondary">コントレイル</a></td>
+<td class="text-start bg-dark text-secondary"><a href="https://www.google.com/search?q=ラマンサニステルの2023" target="_blank" class="text-secondary">ラマンサニステル</a></td>
+<td class="text-start bg-dark text-secondary">上村洋行</td>
+<td class="text-start bg-dark text-secondary">川島牧場</td>
+<td class="text-start bg-dark text-secondary">辻子　依旦</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">5</td>
+<td class="text-end bg-gate6 text-white">2850</td>
+<td class="text-end bg-gate6 text-white">1000</td>
+<td class="text-end bg-gate6 text-white">2.0.1.2</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ディアダイヤモンド" target="_blank" class="text-white">ディアダイヤモンド</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=サートゥルナーリア" target="_blank" class="text-white">サートゥルナーリア</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=スカイダイヤモンズの2023" target="_blank" class="text-white">スカイダイヤモンズ</a></td>
+<td class="text-start bg-gate6 text-white">手塚貴久</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">インゼルレーシング</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">6</td>
+<td class="text-end bg-dark text-white">349</td>
+<td class="text-end bg-dark text-white">700</td>
+<td class="text-end bg-dark text-white">0.0.0.6</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=アリアス" target="_blank" class="text-white">アリアス</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=コントレイル" target="_blank" class="text-white">コントレイル</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=アンジェリックの2023" target="_blank" class="text-white">アンジェリック</a></td>
+<td class="text-start bg-dark text-white">高柳瑞樹</td>
+<td class="text-start bg-dark text-white">杵臼牧場</td>
+<td class="text-start bg-dark text-white">越村　洋子</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">7</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">700</td>
+<td class="text-end bg-dark text-white">0.0.0.1</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=レッドピアレス" target="_blank" class="text-white">レッドピアレス</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=コントレイル" target="_blank" class="text-white">コントレイル</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=レッドメデューサの2023" target="_blank" class="text-white">レッドメデューサ</a></td>
+<td class="text-start bg-dark text-white">中内田充</td>
+<td class="text-start bg-dark text-white">ノーザンファーム</td>
+<td class="text-start bg-dark text-white">ユーワ</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">8</td>
+<td class="text-end bg-dark text-white">279</td>
+<td class="text-end bg-dark text-white">700</td>
+<td class="text-end bg-dark text-white">0.0.1.1</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=クオンタムスター" target="_blank" class="text-white">クオンタムスター</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=コントレイル" target="_blank" class="text-white">コントレイル</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=サンタモニカの2023" target="_blank" class="text-white">サンタモニカ</a></td>
+<td class="text-start bg-dark text-white">堀宣行</td>
+<td class="text-start bg-dark text-white">スマイルファーム</td>
+<td class="text-start bg-dark text-white">KRｼﾞｬﾊﾟﾝ</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">9</td>
+<td class="text-end bg-gate6 text-white">750</td>
+<td class="text-end bg-gate6 text-white">800</td>
+<td class="text-end bg-gate6 text-white">1.0.0.0</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=プロメサアルムンド" target="_blank" class="text-white">プロメサアルムンド</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=モーリス" target="_blank" class="text-white">モーリス</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=アーモンドアイの2023" target="_blank" class="text-white">アーモンドアイ</a></td>
+<td class="text-start bg-gate6 text-white">国枝栄</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">シルク</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">10</td>
+<td class="text-end bg-dark text-white">810</td>
+<td class="text-end bg-dark text-white">1300</td>
+<td class="text-end bg-dark text-white">0.2.2.1</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ティタノマキア" target="_blank" class="text-white">ティタノマキア</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=エピファネイア" target="_blank" class="text-white">エピファネイア</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=タイタンクイーンの2023" target="_blank" class="text-white">タイタンクイーン</a></td>
+<td class="text-start bg-dark text-white">池添学</td>
+<td class="text-start bg-dark text-white">ノーザンファーム</td>
+<td class="text-start bg-dark text-white">シルク</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">11</td>
+<td class="text-end bg-gate6 text-white">1358</td>
+<td class="text-end bg-gate6 text-white">400</td>
+<td class="text-end bg-gate6 text-white">1.2.1.5</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=アルデキングダム" target="_blank" class="text-white">アルデキングダム</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=アニマルキングダム" target="_blank" class="text-white">アニマルキングダム</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=タキオンメーカーの2023" target="_blank" class="text-white">タキオンメーカー</a></td>
+<td class="text-start bg-gate6 text-white">村田一誠</td>
+<td class="text-start bg-gate6 text-white">日本中央競馬会日高育成牧場</td>
+<td class="text-start bg-gate6 text-white">秋元　竜弥</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br/>
+</div>
+</div>
+</div><!--//col-->
+<div class="col-sm-12 col-lg-12 col-xl-12">
+    <div id="JUMP156" class="card fs-6">
+        <div class="card-header bg-dark">
+        <a href="https://itoetc.com/pog/POGME0156.html" target="_blank" class="text-white">Rank 8. タカハシ</a>
+        </div>
+        <div class="card-body bg-dark">
+<div class="table-responsive">
+<table class="table table-dark table-sm">
+<tbody>
+<tr>
+<th style="width:50px;"></th>
+<th style="width:100px;"></th>
+<th style="width:100px;"></th>
+<th style="width:100px;"></th>
+<th style="width:50px;"></th>
+<th style="width:250px;"></th>
+<th style="width:250px;"></th>
+<th style="width:250px;"></th>
+<th style="width:200px;"></th>
+<th style="width:300px;"></th>
+<th style="width:300px;"></th>
+</tr>
+<tr>
+<td class="text-end bg-dark text-white"></td>
+<td class="text-end bg-dark text-white">10939</td>
+<td class="text-end bg-dark text-white">10000</td>
+<td class="text-end bg-dark text-white">8.7.3.17</td>
+<td class="text-center %SEX_COLOR_BG% %SEX_COLOR_FG%"></td>
+<td class="text-start bg-dark text-white"><a href="#" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="%BROODMARE_URL%" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+</tr>
+<tr>
+<td class="text-end bg-dark text-white">1</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">1500</td>
+<td class="text-end bg-dark text-white">0.0.0.0</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ビジュアライズ" target="_blank" class="text-white">ビジュアライズ</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=キズナ" target="_blank" class="text-white">キズナ</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=サークリング２の2023" target="_blank" class="text-white">サークリング２</a></td>
+<td class="text-start bg-dark text-white">斉藤崇史</td>
+<td class="text-start bg-dark text-white">三嶋牧場</td>
+<td class="text-start bg-dark text-white">キャロットファーム</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">2</td>
+<td class="text-end bg-gate6 text-white">780</td>
+<td class="text-end bg-gate6 text-white">1300</td>
+<td class="text-end bg-gate6 text-white">1.0.1.1</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ダーリングハースト" target="_blank" class="text-white">ダーリングハースト</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=エピファネイア" target="_blank" class="text-white">エピファネイア</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=フォエヴァーダーリングの2023" target="_blank" class="text-white">フォエヴァーダーリング</a></td>
+<td class="text-start bg-gate6 text-white">国枝栄</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">サンデーレーシング</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">3</td>
+<td class="text-end bg-gate6 text-white">2460</td>
+<td class="text-end bg-gate6 text-white">1200</td>
+<td class="text-end bg-gate6 text-white">1.2.0.1</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=エムズビギン" target="_blank" class="text-white">エムズビギン</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=キタサンブラック" target="_blank" class="text-white">キタサンブラック</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=デルフィニアＩＩの2023" target="_blank" class="text-white">デルフィニアＩＩ</a></td>
+<td class="text-start bg-gate6 text-white">友道康夫</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">杉野　公彦</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">4</td>
+<td class="text-end bg-dark text-white">412</td>
+<td class="text-end bg-dark text-white">1300</td>
+<td class="text-end bg-dark text-white">0.1.0.2</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ジェイストリーク" target="_blank" class="text-white">ジェイストリーク</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=エピファネイア" target="_blank" class="text-white">エピファネイア</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ジェイウォークの2023" target="_blank" class="text-white">ジェイウォーク</a></td>
+<td class="text-start bg-dark text-white">武幸四郎</td>
+<td class="text-start bg-dark text-white">ノーザンファーム</td>
+<td class="text-start bg-dark text-white">シルク</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">5</td>
+<td class="text-end bg-gate6 text-white">890</td>
+<td class="text-end bg-gate6 text-white">1200</td>
+<td class="text-end bg-gate6 text-white">1.1.0.1</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ランブルスコ" target="_blank" class="text-white">ランブルスコ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=キタサンブラック" target="_blank" class="text-white">キタサンブラック</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=サマーハの2023" target="_blank" class="text-white">サマーハ</a></td>
+<td class="text-start bg-gate6 text-white">蛯名正義</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">金子真人ホールディングス</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">6</td>
+<td class="text-end bg-gate6 text-white">1084</td>
+<td class="text-end bg-gate6 text-white">700</td>
+<td class="text-end bg-gate6 text-white">1.0.1.3</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=スカイストライプス" target="_blank" class="text-white">スカイストライプス</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=コントレイル" target="_blank" class="text-white">コントレイル</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ポジティブマインドの2023" target="_blank" class="text-white">ポジティブマインド</a></td>
+<td class="text-start bg-gate6 text-white">安田翔伍</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">キャロットファーム</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">7</td>
+<td class="text-end bg-gate6 text-white">3260</td>
+<td class="text-end bg-gate6 text-white">700</td>
+<td class="text-end bg-gate6 text-white">2.1.0.2</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=バドリナート" target="_blank" class="text-white">バドリナート</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=コントレイル" target="_blank" class="text-white">コントレイル</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=モヒニの2023" target="_blank" class="text-white">モヒニ</a></td>
+<td class="text-start bg-gate6 text-white">松永幹夫</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">サンデーレーシング</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">8</td>
+<td class="text-end bg-dark text-white">150</td>
+<td class="text-end bg-dark text-white">1300</td>
+<td class="text-end bg-dark text-white">0.0.1.1</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=エヴィーヴァ" target="_blank" class="text-white">エヴィーヴァ</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=エピファネイア" target="_blank" class="text-white">エピファネイア</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ケイティーズハートの2023" target="_blank" class="text-white">ケイティーズハート</a></td>
+<td class="text-start bg-dark text-white">鹿戸雄一</td>
+<td class="text-start bg-dark text-white">ノーザンファーム</td>
+<td class="text-start bg-dark text-white">キャロットファーム</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">9</td>
+<td class="text-end bg-gate6 text-white">953</td>
+<td class="text-end bg-gate6 text-white">500</td>
+<td class="text-end bg-gate6 text-white">1.1.0.3</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=コスモナエマ" target="_blank" class="text-white">コスモナエマ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ダノンバラード" target="_blank" class="text-white">ダノンバラード</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=サザンスピードの2023" target="_blank" class="text-white">サザンスピード</a></td>
+<td class="text-start bg-gate6 text-white">手塚貴久</td>
+<td class="text-start bg-gate6 text-white">ビッグレッドファーム</td>
+<td class="text-start bg-gate6 text-white">ビッグレッドファーム</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">10</td>
+<td class="text-end bg-gate6 text-white">950</td>
+<td class="text-end bg-gate6 text-white">300</td>
+<td class="text-end bg-gate6 text-white">1.1.0.3</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=リーチグローリー" target="_blank" class="text-white">リーチグローリー</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=リーチザクラウン" target="_blank" class="text-white">リーチザクラウン</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=リュミエールドールの2023" target="_blank" class="text-white">リュミエールドール</a></td>
+<td class="text-start bg-gate6 text-white">浜田多実</td>
+<td class="text-start bg-gate6 text-white">社台ファーム</td>
+<td class="text-start bg-gate6 text-white">吉田　照哉</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br/>
+</div>
+</div>
+</div><!--//col-->
+<div class="col-sm-12 col-lg-12 col-xl-12">
+    <div id="JUMP168" class="card fs-6">
+        <div class="card-header bg-dark">
+        <a href="https://itoetc.com/pog/POGME0168.html" target="_blank" class="text-white">Rank 9. スエキ</a>
+        </div>
+        <div class="card-body bg-dark">
+<div class="table-responsive">
+<table class="table table-dark table-sm">
+<tbody>
+<tr>
+<th style="width:50px;"></th>
+<th style="width:100px;"></th>
+<th style="width:100px;"></th>
+<th style="width:100px;"></th>
+<th style="width:50px;"></th>
+<th style="width:250px;"></th>
+<th style="width:250px;"></th>
+<th style="width:250px;"></th>
+<th style="width:200px;"></th>
+<th style="width:300px;"></th>
+<th style="width:300px;"></th>
+</tr>
+<tr>
+<td class="text-end bg-dark text-white"></td>
+<td class="text-end bg-dark text-white">9579</td>
+<td class="text-end bg-dark text-white">8500</td>
+<td class="text-end bg-dark text-white">4.6.6.22</td>
+<td class="text-center %SEX_COLOR_BG% %SEX_COLOR_FG%"></td>
+<td class="text-start bg-dark text-white"><a href="#" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="%BROODMARE_URL%" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+</tr>
+<tr>
+<td class="text-end bg-dark text-white">1</td>
+<td class="text-end bg-dark text-white">839</td>
+<td class="text-end bg-dark text-white">1300</td>
+<td class="text-end bg-dark text-white">0.2.2.2</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=グランマエストロ" target="_blank" class="text-white">グランマエストロ</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=エピファネイア" target="_blank" class="text-white">エピファネイア</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=グランアレグリアの2023" target="_blank" class="text-white">グランアレグリア</a></td>
+<td class="text-start bg-dark text-white">木村哲也</td>
+<td class="text-start bg-dark text-white">ノーザンファーム</td>
+<td class="text-start bg-dark text-white">サンデーレーシング</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">2</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">-.-.-.-</td>
+<td class="text-center %SEX_COLOR_BG% %SEX_COLOR_FG%"></td>
+<td class="text-start bg-dark text-white"><a href="#" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=サザンスターズの2023" target="_blank" class="text-white">サザンスターズ</a></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">3</td>
+<td class="text-end bg-gate6 text-white">2560</td>
+<td class="text-end bg-gate6 text-white">1000</td>
+<td class="text-end bg-gate6 text-white">2.1.0.3</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=アンドゥーリル" target="_blank" class="text-white">アンドゥーリル</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=サートゥルナーリア" target="_blank" class="text-white">サートゥルナーリア</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=アンドラステの2023" target="_blank" class="text-white">アンドラステ</a></td>
+<td class="text-start bg-gate6 text-white">中内田充</td>
+<td class="text-start bg-gate6 text-white">社台コーポレーション白老ファーム</td>
+<td class="text-start bg-gate6 text-white">社台レースホース</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">4</td>
+<td class="text-end bg-gate6 text-white">4430</td>
+<td class="text-end bg-gate6 text-white">1000</td>
+<td class="text-end bg-gate6 text-white">2.0.1.1</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=フェスティバルヒル" target="_blank" class="text-white">フェスティバルヒル</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=サートゥルナーリア" target="_blank" class="text-white">サートゥルナーリア</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ミュージアムヒルの2023" target="_blank" class="text-white">ミュージアムヒル</a></td>
+<td class="text-start bg-gate6 text-white">四位洋文</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">吉田　勝己</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">5</td>
+<td class="text-end bg-dark text-white">718</td>
+<td class="text-end bg-dark text-white">700</td>
+<td class="text-end bg-dark text-white">0.1.2.2</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ドンテスタマスター" target="_blank" class="text-white">ドンテスタマスター</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=コントレイル" target="_blank" class="text-white">コントレイル</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=インディアナギャルの2023" target="_blank" class="text-white">インディアナギャル</a></td>
+<td class="text-start bg-dark text-white">杉山晴紀</td>
+<td class="text-start bg-dark text-white">ケイアイファーム</td>
+<td class="text-start bg-dark text-white">藤田　晋</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">6</td>
+<td class="text-end bg-dark text-white">84</td>
+<td class="text-end bg-dark text-white">700</td>
+<td class="text-end bg-dark text-white">0.0.0.3</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ライトフライヤー" target="_blank" class="text-white">ライトフライヤー</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=コントレイル" target="_blank" class="text-white">コントレイル</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ドリームオブジェニーの2023" target="_blank" class="text-white">ドリームオブジェニー</a></td>
+<td class="text-start bg-dark text-white">吉岡辰弥</td>
+<td class="text-start bg-dark text-white">谷川牧場</td>
+<td class="text-start bg-dark text-white">ターフ・スポート</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">7</td>
+<td class="text-end bg-dark text-white">258</td>
+<td class="text-end bg-dark text-white">700</td>
+<td class="text-end bg-dark text-white">0.0.0.3</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ラパンドール" target="_blank" class="text-white">ラパンドール</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=コントレイル" target="_blank" class="text-white">コントレイル</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ラビットランの2023" target="_blank" class="text-white">ラビットラン</a></td>
+<td class="text-start bg-dark text-white">藤原英昭</td>
+<td class="text-start bg-dark text-white">社台ファーム</td>
+<td class="text-start bg-dark text-white">窪田　芳郎</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">8</td>
+<td class="text-end bg-dark text-white">690</td>
+<td class="text-end bg-dark text-white">1300</td>
+<td class="text-end bg-dark text-white">0.2.1.0</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ハムタン" target="_blank" class="text-white">ハムタン</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=エピファネイア" target="_blank" class="text-white">エピファネイア</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=カレンブーケドールの2023" target="_blank" class="text-white">カレンブーケドール</a></td>
+<td class="text-start bg-dark text-white">武幸四郎</td>
+<td class="text-start bg-dark text-white">社台ファーム</td>
+<td class="text-start bg-dark text-white">TNﾚｰｼﾝｸﾞ</td>
+</tr><tr>
+<td class="text-end bg-dark text-secondary">9</td>
+<td class="text-end bg-dark text-secondary">0</td>
+<td class="text-end bg-dark text-secondary">700</td>
+<td class="text-end bg-dark text-secondary">0.0.0.6</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-secondary"><a href="https://www.google.com/search?q=フックセンチョウ" target="_blank" class="text-secondary">フックセンチョウ(抹消)</a></td>
+<td class="text-start bg-dark text-secondary"><a href="https://www.google.com/search?q=アスクピーターパン" target="_blank" class="text-secondary">アスクピーターパン</a></td>
+<td class="text-start bg-dark text-secondary"><a href="https://www.google.com/search?q=ローブディアンジェの2023" target="_blank" class="text-secondary">ローブディアンジェ</a></td>
+<td class="text-start bg-dark text-secondary">佐藤吉勝</td>
+<td class="text-start bg-dark text-secondary">マリオステーブル</td>
+<td class="text-start bg-dark text-secondary">江川　伸夫</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">10</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">700</td>
+<td class="text-end bg-dark text-white">0.0.0.0</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=トーセンマーベラス" target="_blank" class="text-white">トーセンマーベラス</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=コントレイル" target="_blank" class="text-white">コントレイル</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=リトルブックの2023" target="_blank" class="text-white">リトルブック</a></td>
+<td class="text-start bg-dark text-white">田村康仁</td>
+<td class="text-start bg-dark text-white">飛野牧場</td>
+<td class="text-start bg-dark text-white">島川　隆哉</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">11</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">400</td>
+<td class="text-end bg-dark text-white">0.0.0.2</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=キミガハマ" target="_blank" class="text-white">キミガハマ</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ディーマジェスティ" target="_blank" class="text-white">ディーマジェスティ</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=メイショウツバクロの2023" target="_blank" class="text-white">メイショウツバクロ</a></td>
+<td class="text-start bg-dark text-white">嘉藤貴行</td>
+<td class="text-start bg-dark text-white">三嶋牧場</td>
+<td class="text-start bg-dark text-white">嶋田　賢</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br/>
+</div>
+</div>
+</div><!--//col-->
+<div class="col-sm-12 col-lg-12 col-xl-12">
+    <div id="JUMP159" class="card fs-6">
+        <div class="card-header bg-dark">
+        <a href="https://itoetc.com/pog/POGME0159.html" target="_blank" class="text-white">Rank 10. フルカワ</a>
+        </div>
+        <div class="card-body bg-dark">
+<div class="table-responsive">
+<table class="table table-dark table-sm">
+<tbody>
+<tr>
+<th style="width:50px;"></th>
+<th style="width:100px;"></th>
+<th style="width:100px;"></th>
+<th style="width:100px;"></th>
+<th style="width:50px;"></th>
+<th style="width:250px;"></th>
+<th style="width:250px;"></th>
+<th style="width:250px;"></th>
+<th style="width:200px;"></th>
+<th style="width:300px;"></th>
+<th style="width:300px;"></th>
+</tr>
+<tr>
+<td class="text-end bg-dark text-white"></td>
+<td class="text-end bg-dark text-white">7536</td>
+<td class="text-end bg-dark text-white">10000</td>
+<td class="text-end bg-dark text-white">5.6.9.26</td>
+<td class="text-center %SEX_COLOR_BG% %SEX_COLOR_FG%"></td>
+<td class="text-start bg-dark text-white"><a href="#" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"><a href="%BROODMARE_URL%" target="_blank" class="text-white"></a></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+<td class="text-start bg-dark text-white"></td>
+</tr>
+<tr>
+<td class="text-end bg-gate6 text-white">1</td>
+<td class="text-end bg-gate6 text-white">750</td>
+<td class="text-end bg-gate6 text-white">1300</td>
+<td class="text-end bg-gate6 text-white">1.0.0.1</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ダノンヒストリー" target="_blank" class="text-white">ダノンヒストリー</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=エピファネイア" target="_blank" class="text-white">エピファネイア</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=コーステッドの2023" target="_blank" class="text-white">コーステッド</a></td>
+<td class="text-start bg-gate6 text-white">堀宣行</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">ダノックス</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">2</td>
+<td class="text-end bg-gate6 text-white">920</td>
+<td class="text-end bg-gate6 text-white">700</td>
+<td class="text-end bg-gate6 text-white">1.0.0.2</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=コニーアイランド" target="_blank" class="text-white">コニーアイランド</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=コントレイル" target="_blank" class="text-white">コントレイル</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ヤンキーローズの2023" target="_blank" class="text-white">ヤンキーローズ</a></td>
+<td class="text-start bg-gate6 text-white">中内田充</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">サンデーレーシング</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">3</td>
+<td class="text-end bg-dark text-white">334</td>
+<td class="text-end bg-dark text-white">700</td>
+<td class="text-end bg-dark text-white">0.1.0.6</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ボンボンベイビー" target="_blank" class="text-white">ボンボンベイビー</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=コントレイル" target="_blank" class="text-white">コントレイル</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=バイバイベイビーの2023" target="_blank" class="text-white">バイバイベイビー</a></td>
+<td class="text-start bg-dark text-white">矢作芳人</td>
+<td class="text-start bg-dark text-white">グランド牧場</td>
+<td class="text-start bg-dark text-white">前田　晋二</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">4</td>
+<td class="text-end bg-gate6 text-white">780</td>
+<td class="text-end bg-gate6 text-white">700</td>
+<td class="text-end bg-gate6 text-white">1.0.1.1</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=サガルマータ" target="_blank" class="text-white">サガルマータ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=コントレイル" target="_blank" class="text-white">コントレイル</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=コンヴィクション２の2023" target="_blank" class="text-white">コンヴィクション２</a></td>
+<td class="text-start bg-gate6 text-white">福永祐一</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">前田　幸治</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">5</td>
+<td class="text-end bg-gate6 text-white">1320</td>
+<td class="text-end bg-gate6 text-white">800</td>
+<td class="text-end bg-gate6 text-white">1.0.1.3</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=マルガ" target="_blank" class="text-white">マルガ</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=モーリス" target="_blank" class="text-white">モーリス</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ブチコの2023" target="_blank" class="text-white">ブチコ</a></td>
+<td class="text-start bg-gate6 text-white">須貝尚介</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">金子真人ホールディングス</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">6</td>
+<td class="text-end bg-dark text-white">225</td>
+<td class="text-end bg-dark text-white">700</td>
+<td class="text-end bg-dark text-white">0.0.1.2</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ユマハム" target="_blank" class="text-white">ユマハム</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=コントレイル" target="_blank" class="text-white">コントレイル</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=カルティカの2023" target="_blank" class="text-white">カルティカ</a></td>
+<td class="text-start bg-dark text-white">田中博康</td>
+<td class="text-start bg-dark text-white">社台ファーム</td>
+<td class="text-start bg-dark text-white">TNﾚｰｼﾝｸﾞ</td>
+</tr><tr>
+<td class="text-end bg-gate6 text-white">7</td>
+<td class="text-end bg-gate6 text-white">1250</td>
+<td class="text-end bg-gate6 text-white">500</td>
+<td class="text-end bg-gate6 text-white">1.2.0.3</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=ジャスティンルマン" target="_blank" class="text-white">ジャスティンルマン</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=スワーヴリチャード" target="_blank" class="text-white">スワーヴリチャード</a></td>
+<td class="text-start bg-gate6 text-white"><a href="https://www.google.com/search?q=イルーシヴハピネスの2023" target="_blank" class="text-white">イルーシヴハピネス</a></td>
+<td class="text-start bg-gate6 text-white">杉山晴紀</td>
+<td class="text-start bg-gate6 text-white">ノーザンファーム</td>
+<td class="text-start bg-gate6 text-white">三木　正浩</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">8</td>
+<td class="text-end bg-dark text-white">330</td>
+<td class="text-end bg-dark text-white">1300</td>
+<td class="text-end bg-dark text-white">0.0.2.0</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=チェルヴァーラ" target="_blank" class="text-white">チェルヴァーラ</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=エピファネイア" target="_blank" class="text-white">エピファネイア</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=チェッキーノの2023" target="_blank" class="text-white">チェッキーノ</a></td>
+<td class="text-start bg-dark text-white">松下武士</td>
+<td class="text-start bg-dark text-white">ノーザンファーム</td>
+<td class="text-start bg-dark text-white">サンデーレーシング</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">9</td>
+<td class="text-end bg-dark text-white">774</td>
+<td class="text-end bg-dark text-white">600</td>
+<td class="text-end bg-dark text-white">0.2.1.4</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ガードオブオナー" target="_blank" class="text-white">ガードオブオナー</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=サトノダイヤモンド" target="_blank" class="text-white">サトノダイヤモンド</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ルミナスパレードの2023" target="_blank" class="text-white">ルミナスパレード</a></td>
+<td class="text-start bg-dark text-white">林徹</td>
+<td class="text-start bg-dark text-white">ノーザンファーム</td>
+<td class="text-start bg-dark text-white">サンデーレーシング</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">10</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">800</td>
+<td class="text-end bg-dark text-white">0.0.0.1</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ベラジオヴァレル" target="_blank" class="text-white">ベラジオヴァレル</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ロードカナロア" target="_blank" class="text-white">ロードカナロア</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=リリーオブザヴァレーの2023" target="_blank" class="text-white">リリーオブザヴァレー</a></td>
+<td class="text-start bg-dark text-white">上村洋行</td>
+<td class="text-start bg-dark text-white">社台ファーム</td>
+<td class="text-start bg-dark text-white">林田　祥来</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">11</td>
+<td class="text-end bg-dark text-white">853</td>
+<td class="text-end bg-dark text-white">600</td>
+<td class="text-end bg-dark text-white">0.1.3.3</td>
+<td class="text-center bg-gate8 text-white">牝</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ヴィラジョヴィス" target="_blank" class="text-white">ヴィラジョヴィス</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ハービンジャー" target="_blank" class="text-white">ハービンジャー</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=ベルカプリの2023" target="_blank" class="text-white">ベルカプリ</a></td>
+<td class="text-start bg-dark text-white">小栗実</td>
+<td class="text-start bg-dark text-white">レイクヴィラファーム</td>
+<td class="text-start bg-dark text-white">ジョイ・レースホース</td>
+</tr><tr>
+<td class="text-end bg-dark text-white">12</td>
+<td class="text-end bg-dark text-white">0</td>
+<td class="text-end bg-dark text-white">1300</td>
+<td class="text-end bg-dark text-white">0.0.0.0</td>
+<td class="text-center bg-gate4 text-white">牡</td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=マイコンプリート" target="_blank" class="text-white">マイコンプリート</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=エピファネイア" target="_blank" class="text-white">エピファネイア</a></td>
+<td class="text-start bg-dark text-white"><a href="https://www.google.com/search?q=パシオンルージュの2023" target="_blank" class="text-white">パシオンルージュ</a></td>
+<td class="text-start bg-dark text-white">友道康夫</td>
+<td class="text-start bg-dark text-white">ノーザンファーム</td>
+<td class="text-start bg-dark text-white">キーファーズ</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br/>
+</div>
+</div>
+</div><!--//col-->
+<div class="col-sm-12 col-lg-12 col-xl-12">
+    <div id="JUMP171" class="card fs-6">
+        <div class="card-header bg-dark">
+        <a href="https://itoetc.com/pog/POGME0171.html" target="_blank" class="text-white">Rank 11. カネコ</a>
+        </div>
+        <div class="card-body bg-dark">
+</div>
+</div>
+</div><!--//col-->
+<div class="col-sm-12 col-lg-12 col-xl-12">
+    <div id="JUMP163" class="card fs-6">
+        <div class="card-header bg-dark">
+        <a href="https://itoetc.com/pog/POGME0163.html" target="_blank" class="text-white">Rank 12. ヒラオ</a>
+        </div>
+        <div class="card-body bg-dark">
+</div>
+</div>
+</div><!--//col-->
+</div><!--//row-->
+<div id="page_bottom"/>
+</main><!--//container-->
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</body>
+</html>
